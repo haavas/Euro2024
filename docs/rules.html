@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -106,16 +107,25 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Rules of the competition</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
+  
+
+</header>
+
 <section id="rules" class="level1">
 <h1>Rules</h1>
 <p>STV’s Euro Cup competition consists of two parts:</p>
@@ -129,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 <p>We repeat this for quarter-finals, semi-finals and, finally, the final final.</p>
 <p>The grey cells in group stage games 25 thorugh 36 and in the knockout rounds are for penalty shoot-outs. You may fill in these as well, but they have no relevance for the outcome of the competition.</p>
 <section id="points" class="level2">
-<h2 data-anchor-id="points">Points</h2>
+<h2 class="anchored" data-anchor-id="points">Points</h2>
 <ul>
 <li><p>Points are awarded for each and every correct answer to the 14 questions. In addition, we calculate the total number of goals scored in the form for a 15th question “How many goals will there be in total? (Penalty shoot-outs excluded)”. Each of these questions yield 30 points, for a total of 450 for the questions section</p></li>
 <li><p>Points are <em>earned</em> for guessing the correct outcome of each of the games in the group stage. Each correct answer is worth <strong>25</strong> points, for a total of <strong>900</strong> points</p></li>
@@ -138,31 +148,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Finally, <strong>200</strong> points are awarded for correctly guessing the winner of the Euro2021 cup.</p></li>
 </ul>
 <p>The theoretical top score is therefore <strong>2450</strong> points.</p>
-</section>
-</section>
-<section id="section" class="level1">
-<h1></h1>
 
 
 </section>
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://linkedin.com" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -183,6 +174,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
