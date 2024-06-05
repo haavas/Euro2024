@@ -14,11 +14,11 @@
     "text": "Points are awarded for each and every correct answer to the 14 questions. In addition, we calculate the total number of goals scored in the form for a 15th question “How many goals will there be in total? (Penalty shoot-outs excluded)”. Each of these questions yield 30 points, for a total of 450 for the questions section\nPoints are earned for guessing the correct outcome of each of the games in the group stage. There are 36 games in the group stage Each correct answer is worth 25 points, for a total of 900 points\nPoints are deducted for any deviance between the predicted and observed scores. As usual in the Social Sciences, we square the deviance. If the first game is predicted a 2-0 Turkey victory over Italy but ends in a 4-1 Turkish victory, then 25 points are awarded for the correct outcome, before (4-2)2=22=4 and (1-0)2=12=1 points are deducted for slightly missing the correct result. In the end, 25 - 4 - 1 = 20 points are awarded.\nPoints are earned in the the knockout round for guessing the correct teams in each of the knockout stages. 25 points are awarded for each correct team, and a bonus 5 points if the team appears on the correct spot in the playoff schedule. Correctly guessing both teams in a knockout game will thus give (25 + 5) * 2 = 60 points. With 15 knockout games, the total points available is 900.\nFinally, 200 points are awarded for correctly guessing the winner of the Euro2021 cup.\n\n\n\n\n\n\n\n\n\n\nSource\nMax points per item\nN. of items\nTotal maximum points\n\n\n\n\nQualitative questions\n30\n15\n450\n\n\nGroup stages\n25\n36\n900\n\n\nKnockout stages\n60\n15\n900\n\n\nWinner\n200\n1\n200\n\n\n\nThe theoretical top score is therefore 2450 points."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "past_winners.html",
+    "href": "past_winners.html",
+    "title": "Rules of the competition",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "This is the fifth time the competition is held. The previous winners are:\n2014: Åse Gornitzka 2016: Sigurd Lindstad 2018: Ida Weseth Bjøru 2021: Øyvind Colbjørnsen"
   },
   {
     "objectID": "about.html",
@@ -32,13 +32,13 @@
     "href": "index.html",
     "title": ".",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to the Euro 2024 Competition\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2024\n\n\nHåvard Strand\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Welcome to the Euro 2024 Competition",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "This is where the updates will be posted. Stay tuned!"
   }
 ]

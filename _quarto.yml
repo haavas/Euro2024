@@ -7,6 +7,7 @@ website:
   navbar:
     right:
       - about.qmd
+      - past_winners.qmd
       - rules.qmd
       - icon: github
         href: https://github.com/
