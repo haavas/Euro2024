@@ -1,5 +1,5 @@
 ---
-title: "Rules of the competition"
+title: "Past winners"
 image: profile.jpg
 rules:
   template: jolla
@@ -8,6 +8,9 @@ rules:
 This is the fifth time the competition is held. The previous winners are:
 
 2014: Åse Gornitzka
+
 2016: Sigurd Lindstad
+
 2018: Ida Weseth Bjøru
+
 2021: Øyvind Colbjørnsen
