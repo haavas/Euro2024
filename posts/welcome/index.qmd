@@ -1,8 +1,82 @@
 ---
-title: "Welcome to the Euro 2024 Competition"
+title: "Welcome To My Blog"
 author: "Håvard Strand"
-date: "2024-06-05"
-categories: [news]
+date: "2024-06-13"
+categories: [warmup]
 ---
 
-This is where the updates will be posted. Stay tuned!
+# Welcome to the ISV EURO2024 competition blog
+
+Hi and welcome to the competition. While we wait for VAR, we can take a quick review of the past competitions.
+
+## 2022 FIFA World Cup in Qatar
+
+We boycotted this event.
+
+## 2021 UEFA European Football Championship in Many Places
+
+The 2021 EURO championship was won by Øyvind Colbjørnsen.
+
+![](Winner2021.png)
+
+## 2018 FIFA World Cup in Russia
+
+The 2018 competition was won by Ida
+
+![](Winner2018.png)
+
+## 2016 European Football Championship in France
+
+Sigurd Lindstad won the competition.
+
+|                                 |     |
+|---------------------------------|-----|
+| **Sigurd Lindstad**             | 833 |
+| **Karl Bjurstrøm**              | 807 |
+| **Håvard Strand**               | 777 |
+| **Tarald Laudal Berge**         | 771 |
+| **Andreas Kokkvoll Tveit**      | 769 |
+| **Kacper Szulecki**             | 747 |
+| **Knut Andreas Christoffersen** | 734 |
+| **Tom Christensen**             | 730 |
+| **Dagfinn Hagen**               | 712 |
+| **Jon Hovi**                    | 691 |
+| **Ida Weseth Bjøru**            | 683 |
+| **Jostein Askim**               | 664 |
+| **Martin Søyland**              | 658 |
+| **Øyvind Colbjørnsen**          | 646 |
+| **Kristina Enge**               | 635 |
+| **Tore Wig**                    | 634 |
+| **Dag Harald Claes**            | 624 |
+| **Jan Erling Klausen**          | 616 |
+| **Eirin Kristiansen**           | 612 |
+| **Robert Huseby**               | 583 |
+| **Olav Skram Stokke**           | 578 |
+
+## 2014 FIFA World Cup in Brazil
+
+Åse won the competition.
+
+|          |                         |            |
+|----------|-------------------------|------------|
+| **Rank** | **Name**                | **Points** |
+| 1        | Åse Gornitzka           | 302        |
+| 2        | Håvard Strand           | 296        |
+| 3        | Kristina Enge           | 291        |
+| 4        | Ida Weseth Bjøru        | 287        |
+| 5        | Håvard Hegre            | 270        |
+| 6        | Øyvind Bratberg         | 262        |
+| 7        | Dagfinn Hagen           | 258        |
+| 8        | Kristoffer Kolltveit    | 256        |
+| 9        | Tom Christensen         | 244        |
+| 10       | Carl Henrik Knutsen     | 242        |
+| 11       | Jon Hovi                | 226        |
+| 12       | Vegard Berggård         | 222        |
+| 13       | Jostein Askim           | 211        |
+| 14       | Øyvind Østerrud         | 208        |
+| 15       | Helge Hveem             | 193        |
+| 16       | Tore Wiig               | 188        |
+| 17       | Eirin Kristiansen       | 145        |
+| 18       | Øyvind Colbjørnsen      | 144        |
+| 19       | Helge Holtermann        | 135        |
+| 20       | Malin Folgerø Stensland | 19         |
