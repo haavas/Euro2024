@@ -1,5 +1,5 @@
 ---
-title: "Welcome To My Blog"
+title: "Welcome To the ISV Euro 2024 Competition!"
 author: "Håvard Strand"
 date: "2024-06-13"
 categories: [warmup]
