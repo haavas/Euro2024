@@ -20,7 +20,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 ```
 
-Switzerland won against Hungary. Øyvind is in the lead, with Philipp, Halvqrd and Jacob five points behind. On the other end of the scale, we are all in the positive range.
+Switzerland won against Hungary. Øyvind is in the lead, with Philipp, Halvard and Jacob five points behind. On the other end of the scale, we are all in the positive range.
 
 A few words on the colors. Dark blue means that many points were won since last game, while deep red means that many points were lost.
 
