@@ -1,8 +1,8 @@
 ---
 title: "Hungary vs Switserland"
 author: "Håvard Strand"
-date: "2024-06-13"
-categories: [warmup]
+date: "2024-06-15"
+categories: [update]
 execute:
   echo: false
 ---

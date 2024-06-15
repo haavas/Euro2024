@@ -1,13 +1,13 @@
 ---
-title: "Hungary vs Switserland"
+title: "Spain beat Croatia"
 author: "Håvard Strand"
-date: "2024-06-13"
-categories: [warmup]
+date: "2024-06-15"
+categories: [update]
 execute:
   echo: false
 ---
 
-# Saturday 15th June 2024, Hungary vs Switzerland
+# Saturday 15th June 2024, Spain beat Croatia
 
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
 
