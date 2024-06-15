@@ -1,0 +1,17 @@
+{
+  "hash": "62121720a25c5ad8de124cda1a7d1360",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hungary vs Switserland\"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-13\"\ncategories: [warmup]\nexecute:\n  echo: false\n---\n\n\n# Saturday 15th June 2024, Hungary vs Switzerland\n\n\n::: {.cell}\n\n:::\n\n\nSpain beat Croatia, but the score did not reflect what was a fairly evenly played game. Rodri was spared a red card by QAR intervention. Always nice to know that certains things never change. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nØyvind remains in the lead. \n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

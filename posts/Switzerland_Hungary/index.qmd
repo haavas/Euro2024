@@ -7,7 +7,7 @@ execute:
   echo: false
 ---
 
-# Saturday 15th June 2024, Hungary vs Switserland
+# Saturday 15th June 2024, Hungary vs Switzerland
 
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
 
@@ -20,35 +20,31 @@ knitr::opts_chunk$set(out.width = "100%")
 
 ```
 
-Germany beat Scotland 5-1 as we celebrate summer and the start of the European Championship. 
+Switzerland won against Hungary. Øyvind is in the lead, with Philipp, Halvqrd and Jacob five points behind. On the other end of the scale, we are all in the positive range.
+
+A few words on the colors. Dark blue means that many points were won since last game, while deep red means that many points were lost.
 
 ```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
 #| warning: false
 
 invisible(capture.output(Sys.setlocale()))
-nettverk <- readr::read_delim("res2.csv", delim=";", locale = locale(encoding = "UTF-8"))
-
+nettverk <- readr::read_delim("res2.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
 leaderboard <- tibble::as_tibble(nettverk)
 
 leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
 
 hbar<-leaderboard 
-hbar$f<-0
-colnames(hbar) <- c("x", "y", "f")
-hbar$diff<-hbar$y-hbar$f
+hbar$diff <- hbar$X3-hbar$X2
 
-invisible(capture.output(Sys.setlocale()))
-
-ggplot(hbar, aes(x=reorder(x, y), y=y, fill = diff )) + 
+ggplot(hbar, aes(x=reorder(X1, X3), y=X3, fill = diff )) + 
     geom_bar(stat = 'identity') + 
-    scale_y_continuous(limits = c(-25, 55)) +
+    scale_y_continuous(limits = c(-5, 90)) +
     coord_flip() + 
     scale_fill_gradient2(low = "red", high="blue") +
-    geom_text(aes(label = y), hjust=-0.75, size = 5 ) + 
+    geom_text(aes(label = X3), hjust=-0.75, size = 5 ) + 
     ylab("Points") +
     xlab(" ") +
     theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
-
 ```
 The graph looks kind of brutal, for some, but this will very likely change as we move along.
 
