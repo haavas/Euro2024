@@ -1,0 +1,112 @@
+---
+title: "A few words about the competiton"
+author: "Håvard Strand"
+date: "2024-06-13"
+categories: [warmup]
+
+execute: 
+  warning: false
+  message: false
+  echo: false
+---
+
+# A few words about the competiton
+
+"The competition is a great opportunity to learn new things and to test your skills. It is also a great way to meet new people and to have fun. I hope you will enjoy it and that you will learn a lot from it. Good luck!"
+
+That was ChatGTP's idea of what this blog post should contain. There is still room for improvement.
+
+```{r}
+#| column: screen
+#| out-width: 100%
+#| fig-format: svg
+
+library(tinytable)
+library(tidyverse)
+library(DT)
+library(ggplot2)
+library(network)
+library(igraph)
+
+winners <- as_tibble(read.csv("Winners.csv", sep=";", header = FALSE, stringsAsFactors=FALSE, fileEncoding = "Windows-1252")) %>% 
+  select(-V3) %>% 
+  rename("Winner" = "V2")
+
+
+cormat <- as_tibble(read.csv("cormat.csv", sep=";", header = FALSE, stringsAsFactors=FALSE, fileEncoding = "Windows-1252"))
+
+min_corr <- cormat %>% 
+  filter(V1 != V2) %>%
+  group_by(V1) %>% 
+  summarize(x = max(V3)) %>% 
+  ungroup() %>%
+  summarize(n = min(x))
+
+cormat$V4 <- ifelse(cormat$V3 >= min_corr[[1]], 1, 0)
+cormat <- rename(cormat, "Korrelasjon" = "V3")
+names <- cormat %>% group_by(V1) %>% summarize(x = mean(V4))
+
+#join winners and cormat by V1
+cormat <- cormat %>% left_join(winners, by = c("V1" = "V1"))
+
+# create a edge list from cormat with the columns from and to
+egde_list <- cormat %>% filter(V4 == 1) %>% filter(V1 != V2) %>% select(V1, V2)
+
+verticies <- winners
+
+g <- graph_from_data_frame(d=egde_list, vertices=verticies, directed=TRUE)
+
+unique_values <- unique(verticies$Winner)
+num_unique_values <- length(unique_values)
+color_palette <- rainbow(num_unique_values)
+for (i in 1:num_unique_values) {
+  V(g)$color[V(g)$Winner == unique_values[i]] <- color_palette[i]
+}
+
+
+# Can you make a set of initials from a list of full names?
+# Yes, you can. Here is an example of how to do it.
+
+
+# Create a function that takes a full name and returns the initials
+
+get_initials <- function(full_name) {
+  # Split the full name into a vector of words
+  words <- strsplit(full_name, " ")[[1]]
+  # Extract the first letter of each word
+  initials <- sapply(words, function(word) substr(word, 1, 1))
+  # Concatenate the initials into a single string
+  initials <- paste(initials, collapse = "")
+  return(initials)
+}
+
+
+
+#modify the plot above to only show initials using the get_initials function
+initials <- sapply(verticies$V1, get_initials)
+
+
+V(g)$label <- initials
+
+plot(g, 
+     vertex.color=V(g)$color, 
+     vertex.label.family="Gill Sans MT", 
+      vertex.label.cex=0.6,
+     vertex.size=20,
+     edge.color="black",
+     edge.arrow.size=0,
+     vertex.label.font=2)
+
+# Modify the legend with the same font family as the plot
+
+legend("bottomleft", legend=unique_values, fill=color_palette, title="Winner", text.font=4)
+
+
+```
+How do we relate to each other? The graph above shows the relationships between the participants of the competition. The color of the nodes represents the winners, as shown in the legend.The labels are our initials. 
+
+There are five participants that stand out. Olav believe that Italy will win the competition, Lærke believes that Portugal will win, and they are alone in this. While Siri has Germany as her winner, her predictions are sufficently different from the others to make her stand out. Øivind believes in England, but also predicts the games quite differntly from the others. Finally, there is Jacob, who stands alone with Denmark, but has apart from that quite similar predictions to the others. Anna is alone in predicting Belgium happiness, but it seems quite a few has Belgium as their dark horse to align her predictions fairly well with the cluster.
+
+France is our collective favorite, with 17 participants predicting them as the winner. Germany is picked by 7 of us, while 6 believe in England. Spain is the favourite of 5 participants. 
+
+ 

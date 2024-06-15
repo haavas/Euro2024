@@ -1,0 +1,16 @@
+{
+  "hash": "67b33c06ba859b2e16865c733c49361f",
+  "result": {
+    "markdown": "---\ntitle: \"A few words about the competiton\"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-13\"\ncategories: [warmup]\n\nexecute: \n  warning: false\n  message: false\n  echo: false\n---\n\n\n# A few words about the competiton\n\n\"The competition is a great opportunity to learn new things and to test your skills. It is also a great way to meet new people and to have fun. I hope you will enjoy it and that you will learn a lot from it. Good luck!\"\n\nThat was ChatGTP's idea of what this blog post should contain. There is still room for improvement\n\n\n::: {.cell .column-screen}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.svg){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
