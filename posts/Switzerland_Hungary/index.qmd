@@ -46,14 +46,6 @@ ggplot(hbar, aes(x=reorder(X1, X3), y=X3, fill = diff )) +
     xlab(" ") +
     theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
 ```
-The graph looks kind of brutal, for some, but this will very likely change as we move along.
-
-
-# Who scored the first goal?
-
-Germany.
-
-30 points have been dished out. 
 
 
 
