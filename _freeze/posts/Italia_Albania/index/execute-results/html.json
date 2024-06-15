@@ -1,0 +1,16 @@
+{
+  "hash": "416938c659a144f0aa83df91df9e69fe",
+  "result": {
+    "markdown": "---\ntitle: \"Italy beat Albania\"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-15\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Saturday 15th June 2024, Italia beat Albania\n\n\n::: {.cell}\n\n:::\n\n\nItalia won, but conceded a goal after 23 seconds. That must hurt. \n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nThis outcome was largely anticipated by everyone. Philipp lost some ground to the top, but everything can still happen. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
