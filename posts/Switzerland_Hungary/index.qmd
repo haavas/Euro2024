@@ -1,5 +1,5 @@
 ---
-title: "Hungary vs Switserland"
+title: "Hungary vs Switzerland"
 author: "Håvard Strand"
 date: "2024-06-15"
 categories: [update]
