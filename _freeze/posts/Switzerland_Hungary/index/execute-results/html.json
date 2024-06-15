@@ -1,0 +1,17 @@
+{
+  "hash": "ac7641925d019b2a3a4c1b0f25e02d93",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hungary vs Switserland\"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-13\"\ncategories: [warmup]\nexecute:\n  echo: false\n---\n\n\n# Saturday 15th June 2024, Hungary vs Switserland\n\n\n::: {.cell}\n\n:::\n\n\nGermany beat Scotland 5-1 as we celebrate summer and the start of the European Championship. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nThe graph looks kind of brutal, for some, but this will very likely change as we move along.\n\n\n# Who scored the first goal?\n\nGermany.\n\n30 points have been dished out. \n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

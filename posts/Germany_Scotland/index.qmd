@@ -26,7 +26,7 @@ Germany beat Scotland 5-1 as we celebrate summer and the start of the European C
 #| warning: false
 
 invisible(capture.output(Sys.setlocale()))
-nettverk <- readr::read_delim("res1.csv", delim=";", locale = locale(encoding = "Latin1"))
+nettverk <- readr::read_delim("res1.csv", delim=";", col_names = FALSE, locale = locale(encoding = "Latin1"))
 
 leaderboard <- tibble::as_tibble(nettverk)
 
