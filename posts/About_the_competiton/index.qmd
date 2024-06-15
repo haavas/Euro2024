@@ -16,6 +16,12 @@ execute:
 
 That was ChatGTP's idea of what this blog post should contain. There is still room for improvement.
 
+How do we relate to each other? The graph above shows the relationships between the participants of the competition. The color of the nodes represents the winners, as shown in the legend.The labels are our initials. 
+
+There are five participants that stand out. Olav believe that Italy will win the competition, Lærke believes that Portugal will win, and they are alone in this. While Siri has Germany as her winner, her predictions are sufficiently different from the others to make her stand out. Øivind believes in England, but also predicts the games quite differently from the others. Finally, there is Jacob, who stands alone with Denmark, but has apart from that quite similar predictions to the others. Anna is alone in predicting Belgium happiness, but it seems quite a few has Belgium as their dark horse to align her predictions fairly well with the cluster.
+
+France is our collective favorite, with 17 participants predicting them as the winner. Germany is picked by 7 of us, while 6 believe in England. Spain is the favorite of 5 participants. 
+
 ```{r}
 #| column: screen
 #| out-width: 100%
@@ -103,10 +109,11 @@ legend("bottomleft", legend=unique_values, fill=color_palette, title="Winner", t
 
 
 ```
+
 How do we relate to each other? The graph above shows the relationships between the participants of the competition. The color of the nodes represents the winners, as shown in the legend.The labels are our initials. 
 
-There are five participants that stand out. Olav believe that Italy will win the competition, Lærke believes that Portugal will win, and they are alone in this. While Siri has Germany as her winner, her predictions are sufficently different from the others to make her stand out. Øivind believes in England, but also predicts the games quite differntly from the others. Finally, there is Jacob, who stands alone with Denmark, but has apart from that quite similar predictions to the others. Anna is alone in predicting Belgium happiness, but it seems quite a few has Belgium as their dark horse to align her predictions fairly well with the cluster.
+There are five participants that stand out. Olav believe that Italy will win the competition, Lærke believes that Portugal will win, and they are alone in this. While Siri has Germany as her winner, her predictions are sufficiently different from the others to make her stand out. Øivind believes in England, but also predicts the games quite differently from the others. Finally, there is Jacob, who stands alone with Denmark, but has apart from that quite similar predictions to the others. Anna is alone in predicting Belgium happiness, but it seems quite a few has Belgium as their dark horse to align her predictions fairly well with the cluster.
 
-France is our collective favorite, with 17 participants predicting them as the winner. Germany is picked by 7 of us, while 6 believe in England. Spain is the favourite of 5 participants. 
+France is our collective favorite, with 17 participants predicting them as the winner. Germany is picked by 7 of us, while 6 believe in England. Spain is the favorite of 5 participants. 
 
  
