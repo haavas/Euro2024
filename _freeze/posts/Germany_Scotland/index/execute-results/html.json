@@ -1,0 +1,16 @@
+{
+  "hash": "824147ffabf8b18c54f2c0c921317c10",
+  "result": {
+    "markdown": "---\ntitle: \"Germany vs Scotland\"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-13\"\ncategories: [warmup]\nexecute:\n  echo: false\n---\n\n\n# Friday 14th June 2024, Germany vs Scotland\n\n\n::: {.cell}\n\n:::\n\n\nGermany beat Scotland 5-1 as we celebrate summer and the start of the European Championship. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nThe graph looks kind of brutal, for some, but this will very likely change as we move along.\n\n\n# Who scored the first goal?\n\nGermany.\n\n30 points have been dished out. \n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
