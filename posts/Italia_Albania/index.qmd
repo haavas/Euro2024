@@ -1,0 +1,64 @@
+---
+title: "Hungary vs Switserland"
+author: "Håvard Strand"
+date: "2024-06-13"
+categories: [warmup]
+execute:
+  echo: false
+---
+
+# Saturday 15th June 2024, Hungary vs Switserland
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Germany beat Scotland 5-1 as we celebrate summer and the start of the European Championship. 
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res2.csv", delim=";", locale = locale(encoding = "UTF-8"))
+
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$f<-0
+colnames(hbar) <- c("x", "y", "f")
+hbar$diff<-hbar$y-hbar$f
+
+invisible(capture.output(Sys.setlocale()))
+
+ggplot(hbar, aes(x=reorder(x, y), y=y, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-25, 55)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = y), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+
+```
+The graph looks kind of brutal, for some, but this will very likely change as we move along.
+
+
+# Who scored the first goal?
+
+Germany.
+
+30 points have been dished out. 
+
+
+
+
