@@ -1,7 +1,7 @@
 ---
-title: "Poland "
+title: "Poland vs Netherlands"
 author: "Håvard Strand"
-date: "2024-06-15"
+date: "2024-06-16"
 categories: [update]
 execute:
   echo: false
