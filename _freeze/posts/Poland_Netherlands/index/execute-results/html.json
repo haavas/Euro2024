@@ -1,0 +1,16 @@
+{
+  "hash": "fe465aa64cf4ebba09b61870e7104d74",
+  "result": {
+    "markdown": "---\ntitle: \"Poland \"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-15\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Sunday 16th June 2024, Netherlands beat Poland\n\n\n::: {.cell}\n\n:::\n\n\nThe Netherlands won, as many of us had predicted. No significant changes in the front, but Øyvind remain in the lead. \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
