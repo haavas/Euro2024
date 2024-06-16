@@ -1,0 +1,16 @@
+{
+  "hash": "9f20120aff75a586692d18d69f6e7a2c",
+  "result": {
+    "markdown": "---\ntitle: \"England beats Serbia\"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-16\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Sunday 16th June 2024, England beats Serbia but fails to impress\n\n\n::: {.cell}\n\n:::\n\n\nEngland was the bookmaker's favorite to win EURO2024, but this game did not bolster their standings. Serbia could easily have left with something from the game. \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\n\nWe mostly saw this coming, but all the purple shows that many thought the score would be something more exiting.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

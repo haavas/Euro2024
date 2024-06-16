@@ -1,0 +1,49 @@
+---
+title: "England beats Serbia"
+author: "Håvard Strand"
+date: "2024-06-16"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Sunday 16th June 2024, England beats Serbia but fails to impress
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+England was the bookmaker's favorite to win EURO2024, but this game did not bolster their standings. Serbia could easily have left with something from the game. 
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res7.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X8-hbar$X7
+
+ggplot(hbar, aes(x=reorder(X1, X8), y=X8, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 230)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X8), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+
+We mostly saw this coming, but all the purple shows that many thought the score would be something more exiting.
