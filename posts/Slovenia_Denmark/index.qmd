@@ -1,0 +1,50 @@
+---
+title: "Hjulmand out!"
+author: "Håvard Strand"
+date: "2024-06-15"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Sunday 16th June 2024, the first draw of the year
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Denmark failed to win against Slovenia, and the blame must be put on the shoulders of the Danish coach, Hjulmand. As the game developed, it was evident that Denmark didn't have the quality in midfield to secure a win. As the best midfielder in the world, Albert Grønbæk, was inexplicably left out of the squad, Hjulmand has some explaining to do.
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res6.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X7-hbar$X6
+
+ggplot(hbar, aes(x=reorder(X1, X7), y=X7, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 200)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X7), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+
+Something has happened to the leaderboard. Øyvind, Halvard and Dagfinn are now ahead of the field. They have all, very impressively, the correct outcome of every game, but Øyvind has the most correct scores. Jostein and Jan Erling also picked up this draw. The rest of us failed more or less miserably. 
+

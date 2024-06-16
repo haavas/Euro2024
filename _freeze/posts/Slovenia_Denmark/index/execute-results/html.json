@@ -1,0 +1,16 @@
+{
+  "hash": "9cd4d09c20d0cf6e7e60f87d7917de4e",
+  "result": {
+    "markdown": "---\ntitle: \"Hjulmand out!\"\nauthor: \"Håvard Strand\"\ndate: \"2024-06-15\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Sunday 16th June 2024, the first draw of the year\n\n\n::: {.cell}\n\n:::\n\n\nDenmark failed to win against Slovenia, and the blame must be put on the shoulders of the Danish coach, Hjulmand. As the game developed, it was evident that Denmark didn't have the quality in midfield to secure a win. As the best midfielder in the world, Albert Grønbæk, was inexplicably left out of the squad, Hjulmand has some explaining to do.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\n\nSomething has happened to the leaderboard. Øyvind, Halvard and Dagfinn are now ahead of the field. They have all, very impressively, the correct outcome of every game, but Øyvind has the most correct scores. Jostein and Jan Erling also picked up this draw. The rest of us failed more or less miserably. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
