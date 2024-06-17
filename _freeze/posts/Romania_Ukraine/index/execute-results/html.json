@@ -1,0 +1,16 @@
+{
+  "hash": "efa7881a801c70d2b3258e425925fc22",
+  "result": {
+    "markdown": "---\ntitle: \"Romania trash Ukraine\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Monday 17th June 2024, Romania trash Ukraine\n\nWhile Ukraine had the ball, Romania scored three goals. Not bad.\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\n\nNot at all a common prediction, but Felix, Philipp and Linda has closed the gap to the top. Miro and Lærke can also bragg about this outcome. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
