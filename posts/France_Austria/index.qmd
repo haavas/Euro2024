@@ -47,6 +47,6 @@ ggplot(hbar, aes(x=reorder(X1, X11), y=X11, fill = diff )) +
     xlab(" ") +
     theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
 ```
-Øyvind, Halvard & Dagfinn remain ahead by more than a games margin.
+Øyvind, Halvard & Dagfinn remain ahead by more than a game's margin.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
