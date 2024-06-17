@@ -1,0 +1,17 @@
+{
+  "hash": "fb46da4d52974ee802821cab48bc32b4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"The average age of the Danish starting 11\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\neditor: \n  markdown: \n    wrap: 72\n---\n\n\n# How old were the Danish starting 11?\n\nThe following players\n\n|     |                       |                            |\n|-----|-----------------------|----------------------------|\n|     |                       |                            |\n| 1   | Kasper Schmeichel     | 5 November 1986 (aged 37)  |\n|     |                       |                            |\n| 2   | Joachim Andersen      | 31 May 1996 (aged 28)      |\n|     |                       |                            |\n| 3   | Jannik Vestergaard    | 3 August 1992 (aged 31)    |\n|     |                       |                            |\n| 6   | Andreas Christensen   | 10 April 1996 (aged 28)    |\n|     |                       |                            |\n| 9   | Rasmus Højlund        | 4 February 2003 (aged 21)  |\n|     |                       |                            |\n| 10  | Christian Eriksen     | 14 February 1992 (aged 32) |\n|     |                       |                            |\n| 17  | Victor Kristiansen    | 16 December 2002 (aged 21) |\n|     |                       |                            |\n| 18  | Alexander Bah         | 9 December 1997 (aged 26)  |\n|     |                       |                            |\n| 19  | Jonas Wind            | 7 February 1999 (aged 25)  |\n|     |                       |                            |\n| 21  | Morten Hjulmand       | 25 June 1999 (aged 24)     |\n|     |                       |                            |\n| 23  | Pierre-Emile Højbjerg | 5 August 1995 (aged 28)    |\n|     |                       |                            |\n\n\n::: {.cell}\n\n:::\n\n\nThe color of love, the color of blood The color of roses, the color of\nmud The color of passion, the color of fire The color of anger, the\ncolor of desire The color of danger, the color of heat The color of\nvictory, the color of defeat The color of life, the color of death The\ncolor of courage, the color of breath The color of war, the color of\npeace The color of joy, the color of grief The color of power, the color\nof pain The color of sunshine, the color of rain The color of beauty,\nthe color of sin The color of the world we live in The color of red, so\nbold and bright The color of day, the color of night\n\nSo, for the first time ever, or at least as far as I know, we have had a\ntotally unforeseen outcome. Belgium lost to Slovaika.\n\nThe red color in the graph tells us how much each of us lost in the\nprediction. The more red, the more we lost. My 4-1 bet cost me 16\npoints.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\n\nHalvard lost less than Øyvind, and the two share the top spot. Dagfinn\nalso closed in on the top. Felix did the opposite and there is again a\nsignificant gap.\n\n\\`\\`\\`{r, echo=FALSE, warning=FALSE, message=FALSE}\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

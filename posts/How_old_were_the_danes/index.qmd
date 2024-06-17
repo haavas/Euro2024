@@ -1,27 +1,44 @@
 ---
-<<<<<<< HEAD
 title: "The average age of the Danish starting 11"
-=======
-title: "What was that?"
->>>>>>> 660aba316b219af8a7ac896bdc55c4f5a82a87d9
 author: "Håvard Strand"
 date: "last-modified"
 categories: [update]
 execute:
   echo: false
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-<<<<<<< HEAD
 # How old were the Danish starting 11?
 
+The following players
 
-
-
-
-=======
-# Monday 17th June 2024, Belgium lost to Slovaika
->>>>>>> 660aba316b219af8a7ac896bdc55c4f5a82a87d9
-
+|     |                       |                            |
+|-----|-----------------------|----------------------------|
+|     |                       |                            |
+| 1   | Kasper Schmeichel     | 5 November 1986 (aged 37)  |
+|     |                       |                            |
+| 2   | Joachim Andersen      | 31 May 1996 (aged 28)      |
+|     |                       |                            |
+| 3   | Jannik Vestergaard    | 3 August 1992 (aged 31)    |
+|     |                       |                            |
+| 6   | Andreas Christensen   | 10 April 1996 (aged 28)    |
+|     |                       |                            |
+| 9   | Rasmus Højlund        | 4 February 2003 (aged 21)  |
+|     |                       |                            |
+| 10  | Christian Eriksen     | 14 February 1992 (aged 32) |
+|     |                       |                            |
+| 17  | Victor Kristiansen    | 16 December 2002 (aged 21) |
+|     |                       |                            |
+| 18  | Alexander Bah         | 9 December 1997 (aged 26)  |
+|     |                       |                            |
+| 19  | Jonas Wind            | 7 February 1999 (aged 25)  |
+|     |                       |                            |
+| 21  | Morten Hjulmand       | 25 June 1999 (aged 24)     |
+|     |                       |                            |
+| 23  | Pierre-Emile Højbjerg | 5 August 1995 (aged 28)    |
+|     |                       |                            |
 
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
 
@@ -33,27 +50,6 @@ library(knitr)
 knitr::opts_chunk$set(out.width = "100%")
 
 ```
-
-The color of love, the color of blood
-The color of roses, the color of mud
-The color of passion, the color of fire
-The color of anger, the color of desire
-The color of danger, the color of heat
-The color of victory, the color of defeat
-The color of life, the color of death
-The color of courage, the color of breath
-The color of war, the color of peace
-The color of joy, the color of grief
-The color of power, the color of pain
-The color of sunshine, the color of rain
-The color of beauty, the color of sin
-The color of the world we live in
-The color of red, so bold and bright
-The color of day, the color of night
-
-So, for the first time ever, or at least as far as I know, we have had a totally unforeseen outcome. Belgium lost to Slovaika.
-
-The red color in the graph tells us how much each of us lost in the prediction. The more red, the more we lost. My 4-1 bet cost me 16 points.
 
 
 ```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
@@ -79,6 +75,9 @@ ggplot(hbar, aes(x=reorder(X1, X10), y=X10, fill = diff )) +
     xlab(" ") +
     theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
 ```
-Halvard lost less than Øyvind, and the two share the top spot. Dagfinn also closed in on the top. Felix did the opposite and there is again a significant gap.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+Halvard lost less than Øyvind, and the two share the top spot. Dagfinn
+also closed in on the top. Felix did the opposite and there is again a
+significant gap.
+
+\`\`\`{r, echo=FALSE, warning=FALSE, message=FALSE}
