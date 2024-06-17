@@ -1,0 +1,70 @@
+---
+title: "What was that?"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Monday 17th June 2024, Belgium lost to Slovaika
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+The color of love, the color of blood
+The color of roses, the color of mud
+The color of passion, the color of fire
+The color of anger, the color of desire
+The color of danger, the color of heat
+The color of victory, the color of defeat
+The color of life, the color of death
+The color of courage, the color of breath
+The color of war, the color of peace
+The color of joy, the color of grief
+The color of power, the color of pain
+The color of sunshine, the color of rain
+The color of beauty, the color of sin
+The color of the world we live in
+The color of red, so bold and bright
+The color of day, the color of night
+
+So, for the first time ever, or at least as far as I know, we have had a totally unforeseen outcome. Belgium lost to Slovaika.
+
+The red color in the graph tells us how much each of us lost in the prediction. The more red, the more we lost. My 4-1 bet cost me 16 points.
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res9.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X10-hbar$X9
+
+ggplot(hbar, aes(x=reorder(X1, X10), y=X10, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 230)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X10), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+Halvard lost less than Øyvind, and the two share the top spot. Dagfinn also closed in on the top. Felix did the opposite and there is again a significant gap.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}

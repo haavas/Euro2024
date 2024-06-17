@@ -1,0 +1,16 @@
+{
+  "hash": "454739f1ca3124d37bbd677dde78614f",
+  "result": {
+    "markdown": "---\ntitle: \"What was that?\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Monday 17th June 2024, Belgium lost to Slovaika\n\n\n\n::: {.cell}\n\n:::\n\n\nThe color of love, the color of blood\nThe color of roses, the color of mud\nThe color of passion, the color of fire\nThe color of anger, the color of desire\nThe color of danger, the color of heat\nThe color of victory, the color of defeat\nThe color of life, the color of death\nThe color of courage, the color of breath\nThe color of war, the color of peace\nThe color of joy, the color of grief\nThe color of power, the color of pain\nThe color of sunshine, the color of rain\nThe color of beauty, the color of sin\nThe color of the world we live in\nThe color of red, so bold and bright\nThe color of day, the color of night\n\nSo, for the first time ever, or at least as far as I know, we have had a totally unforeseen outcome. Belgium lost to Slovaika.\n\nThe red color in the graph tells us how much each of us lost in the prediction. The more red, the more we lost. My 4-1 bet cost me 16 points.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nHalvard lost less than Øyvind, and the two share the top spot. Dagfinn also closed in on the top. Felix did the opposite and there is again a significant gap.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
