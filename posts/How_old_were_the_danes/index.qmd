@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "The average age of the Danish starting 11"
+=======
+title: "What was that?"
+>>>>>>> 660aba316b219af8a7ac896bdc55c4f5a82a87d9
 author: "Håvard Strand"
 date: "last-modified"
 categories: [update]
@@ -7,12 +11,16 @@ execute:
   echo: false
 ---
 
+<<<<<<< HEAD
 # How old were the Danish starting 11?
 
 
 
 
 
+=======
+# Monday 17th June 2024, Belgium lost to Slovaika
+>>>>>>> 660aba316b219af8a7ac896bdc55c4f5a82a87d9
 
 
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
