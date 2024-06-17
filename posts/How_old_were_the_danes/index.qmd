@@ -12,7 +12,7 @@ editor:
 
 # How old were the Danish starting 11?
 
-The following players
+The following players started the game for Denmark.
 
 |     |                       |                            |
 |-----|-----------------------|----------------------------|
@@ -51,18 +51,39 @@ knitr::opts_chunk$set(out.width = "100%")
 
 ```
 
+The average dane is born on July 31st 1996, making him 27 years, 10
+months and 15 days old. A very close call, which was made by a large
+number of people. 
+
+Some of you might want to argue that the rounding off
+is wrong and that the average age is closer to 28.0 than 27.0. And to
+this I can only say that it is very much not how things work with age.
+Try sending your 17.5-year old to the store to buy beer.
+
+![](R.png)
+
+
 
 ```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
 #| warning: false
 
 invisible(capture.output(Sys.setlocale()))
 nettverk <- readr::read_delim("res9.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+old <- readr::read_delim("res9_old.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
 leaderboard <- tibble::as_tibble(nettverk)
+old <- tibble::as_tibble(old)
 
 leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+old <- old %>% arrange_at(ncol(.), desc) %>% 
+  select(X1, X10) %>% 
+  rename(X1 = X1, dan = X10)
 
-hbar<-leaderboard 
-hbar$diff <- hbar$X10-hbar$X9
+hbar<-leaderboard %>% 
+  left_join(old, by = "X1") %>% 
+  rename(X10 = X10) %>% 
+  arrange_at(ncol(.), desc)
+  
+hbar$diff <- hbar$X10-old$dan
 
 
 ggplot(hbar, aes(x=reorder(X1, X10), y=X10, fill = diff )) + 
@@ -76,8 +97,4 @@ ggplot(hbar, aes(x=reorder(X1, X10), y=X10, fill = diff )) +
     theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
 ```
 
-Halvard lost less than Øyvind, and the two share the top spot. Dagfinn
-also closed in on the top. Felix did the opposite and there is again a
-significant gap.
-
-\`\`\`{r, echo=FALSE, warning=FALSE, message=FALSE}
+Many of us got many points.
