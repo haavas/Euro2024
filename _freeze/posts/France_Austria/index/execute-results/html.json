@@ -1,0 +1,16 @@
+{
+  "hash": "fc5a76751701f4b2ed6a43fcbc3adb24",
+  "result": {
+    "markdown": "---\ntitle: \"Franzzzzzzzzz\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Monday 17th June 2024, France beat Austria.\n\nIn a modern replay of Austerlitz France beat Austria. Following England's yawn-inspiring win, France showed that they are a team that can lose against virtually anyone, but they didn't today\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nØyvind, Halvard & Dagfinn remain ahead by more than a games margin.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
