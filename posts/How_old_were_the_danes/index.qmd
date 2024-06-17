@@ -97,4 +97,4 @@ ggplot(hbar, aes(x=reorder(X1, X10), y=X10, fill = diff )) +
     theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
 ```
 
-Many of us got many points.
+Many of us got many points. It is perhaps time to introduce the double-ticket of Jonathan and Ina. Jonathan sent in a prediction form, while Ina had filled out the web form. Combined, they are quite competitive.
