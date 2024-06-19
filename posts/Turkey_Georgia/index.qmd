@@ -1,5 +1,5 @@
 ---
-title: "What was that?"
+title: "Turkey beat Georgia"
 author: "Håvard Strand"
 date: "last-modified"
 categories: [update]

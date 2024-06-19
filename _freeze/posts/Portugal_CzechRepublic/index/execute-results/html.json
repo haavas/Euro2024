@@ -1,0 +1,16 @@
+{
+  "hash": "73f89cbb2c470bdf1356cf4413ee56ec",
+  "result": {
+    "markdown": "---\ntitle: \"Portugal vs. Czeck Republic\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Tuesday 18th June 2024, Portugal beat the Czeck Republic\n\n\n\n::: {.cell}\n\n:::\n\n\nPortugal won, almost everyone thought they would and the standings change very little. Nina is now a point ahead of Dagfinn in third. \n\nI have to admit that I am not sure how to refer to the team from the Czeck Republic, and the Copilot AI is not helping me out. I will go with \"the Czeck Republic\" for now, but any feedback will be greatly appreciated. \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
