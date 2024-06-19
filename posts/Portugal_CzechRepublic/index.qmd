@@ -1,0 +1,52 @@
+---
+title: "What was that?"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Tuesday 18th June 2024, Turkey beat Georgia
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Many thought Turkey would beat Georgia. Among them football genius Halvard. Øyvind Colbjørnsen stumbled, so we have a clear leader. The OPA trio Jostein, Jan Erling and Kristoffer are racing up the charts, and Nina is sharing the third spot with Dagfinn. 
+
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res11.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X12-hbar$X11
+
+ggplot(hbar, aes(x=reorder(X1, X12), y=X12, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 290)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X12), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}

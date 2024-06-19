@@ -1,0 +1,16 @@
+{
+  "hash": "2543fc7756273416b463477659abb82c",
+  "result": {
+    "markdown": "---\ntitle: \"What was that?\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Tuesday 18th June 2024, Turkey beat Georgia\n\n\n\n::: {.cell}\n\n:::\n\n\nMany thought Turkey would beat Georgia. Among them football genius Halvard. Øyvind Colbjørnsen stumbled, so we have a clear leader. The OPA trio Jostein, Jan Erling and Kristoffer are racing up the charts, and Nina is sharing the third spot with Dagfinn. \n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
