@@ -1,0 +1,16 @@
+{
+  "hash": "a028a4431d5b156da7ac0f9325d3e84d",
+  "result": {
+    "markdown": "---\ntitle: \"A draw between Croatia and Albania\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Tuesday 19th June 2024, Croatia and Albania are both dissapointed\n\n\n\n::: {.cell}\n\n:::\n\n\nFive persons predicted a draw in this game, and the narrow fields means that the standings change quite a lot. Philipp jumped up to third place, while Miro is in fifth. Jon has also raced up the charts, and is now only a game away from Øyvind in second. Christian and Dag Harald also predicted this outcome.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
