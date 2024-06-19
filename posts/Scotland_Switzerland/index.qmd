@@ -1,0 +1,51 @@
+---
+title: "Scotland - Switzerland 1-1"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Tuesday 19th June 2024, Scotland - Switzerland 1-1
+
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Interesting turn of events! Halvard is still in the lead, but behind him, the competition is fierce. Nina and Dagfinn are again tied, this time in second place, but 11 others are less than a game behind them. Øyvind has lost quite a bit of ground today.
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res15.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X16-hbar$X15
+
+ggplot(hbar, aes(x=reorder(X1, X16), y=X16, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 340)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X16), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}

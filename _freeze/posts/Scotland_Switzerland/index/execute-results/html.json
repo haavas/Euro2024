@@ -1,0 +1,16 @@
+{
+  "hash": "94ac420be0c7132cd24a5931dd0c6f1b",
+  "result": {
+    "markdown": "---\ntitle: \"Scotland - Switzerland 1-1\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Tuesday 19th June 2024, Scotland - Switzerland 1-1\n\n\n\n\n::: {.cell}\n\n:::\n\n\nInteresting turn of events! Halvard is still in the lead, but behind him, the competition is fierce. Nina and Dagfinn are again tied, this time in second place, but 11 others are less than a game behind them. Øyvind has lost quite a bit of ground today.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
