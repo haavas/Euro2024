@@ -1,0 +1,16 @@
+{
+  "hash": "fad6d4637aeaeadf9f9bd998a938c38c",
+  "result": {
+    "markdown": "---\ntitle: \"Slovakia - Ukraine 1-2\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Tuesday 19th June 2024, Slovakia - Ukraine 1-2\n\nGroup E is turning into a heated affair. If Belgium wins against Romania tomorrow, it is a matter of goal difference. If Belgium fails to win, they are in trouble, which has consequences for our competition.\n\n\n\n::: {.cell}\n\n:::\n\n\nMost of us did not see this coming. In fact, only 11 gained points from this game. Vegard remain in a clear lead, but Kristoffer, Jacob and Christian gained significantly. Well done!\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
