@@ -1,0 +1,16 @@
+{
+  "hash": "f2d67208621a5f248d10138a30f43d26",
+  "result": {
+    "markdown": "---\ntitle: \"Poland - Austria 1-3\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Tuesday 19th June 2024, Poland - Austria 1-3\n\nWe are probably saying godbye to Poland in this tournament. Austria is now in a good position to advance to the next round. \n\n\n::: {.cell}\n\n:::\n\n\nVegard is still in the lead, but the gap is closing. Kristoffer, Dagfin, Jacob and Christian are right behind.\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
