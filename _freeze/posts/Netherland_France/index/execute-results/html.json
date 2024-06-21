@@ -1,0 +1,16 @@
+{
+  "hash": "a1a80bc6f1eaa7f396871ae87acf42cd",
+  "result": {
+    "markdown": "---\ntitle: \"Netherlands - France 0-0\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Friday 21th June 2024, Netherlands - France 0-0\n\nVAR rescues France and Griezmann rescues the Netherlands. The game ends 0-0. \n\n\n::: {.cell}\n\n:::\n\n\nDagfinn has overtaken Vegard and is ahead by 20 points. Another draw, and Jon is climbing in the standings. Pål, Nina and Øivind also predicted a draw. The rest of us can only hope for a brighter tomorrow.\n\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
