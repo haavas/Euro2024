@@ -1,0 +1,16 @@
+{
+  "hash": "84dc655942d4f29f98d7836e8e451e45",
+  "result": {
+    "markdown": "---\ntitle: \"Belgium beat Romania\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Friday 21th June 2024, Belgium - Romania 2-0\n\nDespite Belgium's tragic first game and Romania's fantastic game against Ukraine, Belgium won the game hansomly. Lukaku had yet another goal disallowed. The group is wide open.\n\n\n::: {.cell}\n\n:::\n\n\nMost of us saw this coming, so the leaderboard is fairly unchanged. Dagfinn was first to break the magic 400 point barrier.  \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

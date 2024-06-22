@@ -1,0 +1,52 @@
+---
+title: "Belgium beat Romania"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Friday 21th June 2024, Belgium - Romania 2-0
+
+Despite Belgium's tragic first game and Romania's fantastic game against Ukraine, Belgium won the game hansomly. Lukaku had yet another goal disallowed. The group is wide open.
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Most of us saw this coming, so the leaderboard is fairly unchanged. Dagfinn was first to break the magic 400 point barrier.  
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res24.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X25-hbar$X24
+
+ggplot(hbar, aes(x=reorder(X1, X25), y=X25, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 450)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X25), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
