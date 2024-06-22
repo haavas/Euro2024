@@ -1,0 +1,52 @@
+---
+title: "Georgia - Czech Republic 1-1"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Friday 21th June 2024, Georgia - Czech Republic 1-1
+
+For either team, a loss would mean elimination. A draw would keep both teams in the tournament, but they would need to win their last game to advance. Georgia in particular might be in a thight spot here.
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Dagfinn is ahead of Vegard and Jon. Behind them a group of six is about a game behind. 
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res22.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X23-hbar$X22
+
+ggplot(hbar, aes(x=reorder(X1, X23), y=X23, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 390)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X23), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}

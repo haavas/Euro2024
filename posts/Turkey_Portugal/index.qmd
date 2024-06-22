@@ -1,0 +1,53 @@
+---
+title: "Portugal hammers Turkey"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Friday 21th June 2024, Portugal scores three, but Ronaldo is not among the scorers
+
+Portugal does what England and France can't. Everyone except Jon and Martin predicted this outcome, which means that the standings change very little. Dagfinn and Vegard are ahead of large group of people that can very well be on top of the leaderboard by this time tomorrow.
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Ronaldo has not yet scored a goal. But, he has at least two more games to do so.
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res23.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X24-hbar$X23
+
+ggplot(hbar, aes(x=reorder(X1, X24), y=X24, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 420)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X24), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}

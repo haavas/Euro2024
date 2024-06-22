@@ -1,0 +1,16 @@
+{
+  "hash": "d182d0f9b400947b77edb75e06b99a3c",
+  "result": {
+    "markdown": "---\ntitle: \"Portugal hammers Turkey\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Friday 21th June 2024, Portugal scores three, but Ronaldo is not among the scorers\n\nPortugal does what England and France can't. Everyone except Jon and Martin predicted this outcome, which means that the standings change very little. Dagfinn and Vegard are ahead of large group of people that can very well be on top of the leaderboard by this time tomorrow.\n\n\n\n::: {.cell}\n\n:::\n\n\nRonaldo has not yet scored a goal. But, he has at least two more games to do so.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "hash": "22f41795278810d410d08679b07d74d6",
+  "result": {
+    "markdown": "---\ntitle: \"Georgia - Czech Republic 1-1\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Friday 21th June 2024, Georgia - Czech Republic 1-1\n\nFor either team, a loss would mean elimination. A draw would keep both teams in the tournament, but they would need to win their last game to advance. Georgia in particular might be in a thight spot here.\n\n\n::: {.cell}\n\n:::\n\n\nDagfinn is ahead of Vegard and Jon. Behind them a group of six is about a game behind. \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
