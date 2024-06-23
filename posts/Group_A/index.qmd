@@ -1,0 +1,54 @@
+---
+title: "Group A is decided"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Saturday 23rd June 2024, Group A is decided. Scotland is out. 
+
+Germany and Switzerland drew, and Hungary beat Scotland. This means that Germany and Switzerland are through to the next round, and that Hungary has to wait for the other groups to finish to see if they are one of the best third placed teams. Germany vs. England is a clear possibility for the first knockout game. 
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+Most of us saw this coming, so the leaderboard is fairly unchanged. Dagfinn was first to break the magic 400 point barrier.  
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res26.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X27-hbar$X25
+
+ggplot(hbar, aes(x=reorder(X1, X27), y=X27, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 450)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X27), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+Neither game was particularly anticipated, so Christian and Maiken pulled a massive, schocking climb today. Dagfinn is still in the lead, 6 points below his rating yesterday. Jacob gained points and positions, and is in second. Jostein and Jens also climbed into the top ten.
+
+Hounorable mentions to Olav, Sverke, Tore & Lærke, while the rest of us can do better tomorrow. 
+

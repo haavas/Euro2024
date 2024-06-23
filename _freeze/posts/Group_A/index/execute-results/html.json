@@ -1,0 +1,16 @@
+{
+  "hash": "9ab3eda5e5886d98df89328261b13daa",
+  "result": {
+    "markdown": "---\ntitle: \"Group A is decided\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Saturday 23rd June 2024, Group A is decided. Scotland is out. \n\nGermany and Switzerland drew, and Hungary beat Scotland. This means that Germany and Switzerland are through to the next round, and that Hungary has to wait for the other groups to finish to see if they are one of the best third placed teams. Germany vs. England is a clear possibility for the first knockout game. \n\n\n\n::: {.cell}\n\n:::\n\n\nMost of us saw this coming, so the leaderboard is fairly unchanged. Dagfinn was first to break the magic 400 point barrier.  \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nNeither game was particularly anticipated, so Christian and Maiken pulled a massive, schocking climb today. Dagfinn is still in the lead, 6 points below his rating yesterday. Jacob gained points and positions, and is in second. Jostein and Jens also climbed into the top ten.\n\nHounorable mentions to Olav, Sverke, Tore & Lærke, while the rest of us can do better tomorrow. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
