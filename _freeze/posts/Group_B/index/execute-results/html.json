@@ -1,0 +1,16 @@
+{
+  "hash": "dbb8b70b93d8046627a843c8bffc1b40",
+  "result": {
+    "markdown": "---\ntitle: \"Group B was a close call\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Monday 24rd June 2024, Group B is decided. Albania is out, Croatia hangs from a cliff\n\nSpain B beat Albania, while Italy claimed a point with the penultimate touch of the game. We feel with Croatia. \n\n\n::: {.cell}\n\n:::\n\n\nIt is shocking to see how many of us that had both outcomes tonight. In fact, except for Nina, Kristoffer and myself, everyone can feel good about their predictions tonight.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nDagfinn is in the lead, Christian, Maiken and Vegard are close behind and the cup holder Øyvind has climbed back in contention.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
