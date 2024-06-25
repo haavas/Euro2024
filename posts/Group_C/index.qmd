@@ -23,7 +23,6 @@ knitr::opts_chunk$set(out.width = "100%")
 
 ```
 
-It is shocking to see how many of us that had both outcomes tonight. In fact, except for Nina, Kristoffer and myself, everyone can feel good about their predictions tonight.
 
 
 ```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
