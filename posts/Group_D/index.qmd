@@ -1,5 +1,5 @@
 ---
-title: "Group B was a close call"
+title: "Group D was a howler!"
 author: "Håvard Strand"
 date: "last-modified"
 categories: [update]
