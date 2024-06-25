@@ -1,0 +1,52 @@
+---
+title: "Group B was a close call"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Tuesday 25th June 2024, Group D came with a surprise
+
+Austria is a very surprising winner of group D, with France in second. The Dutch are through as well, as one of the four best third placed teams. 
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+It is shocking to see how many of us that had both outcomes tonight. In fact, except for Nina, Kristoffer and myself, everyone can feel good about their predictions tonight.
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res30.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X31-hbar$X29
+
+ggplot(hbar, aes(x=reorder(X1, X31), y=X31, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 510)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X31), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+Dagfinn has a whopping 37 point lead to Jacob, with Christian and Maiken close behind. And there are still 60 points available today!
+
