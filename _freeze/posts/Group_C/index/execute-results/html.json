@@ -1,0 +1,16 @@
+{
+  "hash": "546a6090d4c5a2b27ea68fcbcd16e09a",
+  "result": {
+    "markdown": "---\ntitle: \"Group C is settled. Thank god it is over.\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Tuesday 25th June 2024, Group C goes down as an all time low in the history of the European Championship.\n\nEngland 'won' Group C, and Slovaika and Denmark is through, with Denmark facing Germany due to the higher UEFA rating prior to the championship. Serbia is out, and few will miss them. \n\n\n\n::: {.cell}\n\n:::\n\n\nIt is shocking to see how many of us that had both outcomes tonight. In fact, except for Nina, Kristoffer and myself, everyone can feel good about their predictions tonight.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nThe dynamic duo, Jonathan/Ina, did a solid climb today on the back of a impressive performance. Dagfinn remain top dog, but Maiken and Christian is within striking distance. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

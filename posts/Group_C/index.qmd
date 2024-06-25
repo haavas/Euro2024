@@ -1,0 +1,53 @@
+---
+title: "Group C is settled. Thank god it is over."
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Tuesday 25th June 2024, Group C goes down as an all time low in the history of the European Championship.
+
+England 'won' Group C, and Slovaika and Denmark is through, with Denmark facing Germany due to the higher UEFA rating prior to the championship. Serbia is out, and few will miss them. 
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+It is shocking to see how many of us that had both outcomes tonight. In fact, except for Nina, Kristoffer and myself, everyone can feel good about their predictions tonight.
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res32.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X33-hbar$X31
+
+ggplot(hbar, aes(x=reorder(X1, X33), y=X33, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 510)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X33), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+The dynamic duo, Jonathan/Ina, did a solid climb today on the back of a impressive performance. Dagfinn remain top dog, but Maiken and Christian is within striking distance. 
+
+```{r graph2, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
