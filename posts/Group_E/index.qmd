@@ -1,0 +1,57 @@
+---
+title: "Group E ended in stalemate"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [update]
+execute:
+  echo: false
+---
+
+# Wednesday 26th June 2024, We all love Romania
+
+Ukraina is out and Romania has won the hearts of football fans all over the world. Belgium was a dissapointment of sorts, but where England barely had a pulse, Belgium had three goals disallowed by VAR. Quantitative indicators does not always conway the whole truth, despite Dagfinn's insistence that it does. 
+
+
+
+
+
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+
+
+```{r graph, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+#| warning: false
+
+invisible(capture.output(Sys.setlocale()))
+nettverk <- readr::read_delim("res34.csv", delim=";", col_names = FALSE, locale = locale(encoding = "UTF-8"))
+leaderboard <- tibble::as_tibble(nettverk)
+
+leaderboard <- leaderboard %>% arrange_at(ncol(.), desc)
+
+hbar<-leaderboard 
+hbar$diff <- hbar$X35-hbar$X33
+
+ggplot(hbar, aes(x=reorder(X1, X35), y=X35, fill = diff )) + 
+    geom_bar(stat = 'identity') + 
+    scale_y_continuous(limits = c(-5, 510)) +
+    coord_flip() + 
+    scale_fill_gradient2(low = "red", high="blue") +
+    geom_text(aes(label = X35), hjust=-0.75, size = 5 ) + 
+    ylab("Points") +
+    xlab(" ") +
+    theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold"))
+```
+Dagfinn remain in the lead, but Jacob, Maiken, Jostein, Vegard, Kristoffer, Chistian and Øyvind are within a game's distance. Olav outperformed everyone today and shoots up the standings.
+
+```{r graph2, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}

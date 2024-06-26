@@ -1,0 +1,16 @@
+{
+  "hash": "6c7839c7673a70ac2011c1cc6cb40125",
+  "result": {
+    "markdown": "---\ntitle: \"Group E ended in stalemate\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Wednesday 26th June 2024, We all love Romania\n\nUkraina is out and Romania has won the hearts of football fans all over the world. Belgium was a dissapointment of sorts, but where England barely had a pulse, Belgium had three goals disallowed by VAR. Quantitative indicators does not always conway the whole truth, despite Dagfinn's insistence that it does. \n\n\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nDagfinn remain in the lead, but Jacob, Maiken, Jostein, Vegard, Kristoffer, Chistian and Øyvind are within a game's distance. Olav outperformed everyone today and shoots up the standings.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
