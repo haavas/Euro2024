@@ -1,0 +1,16 @@
+{
+  "hash": "3825f8a877d7f400fb98b3ccc131122d",
+  "result": {
+    "markdown": "---\ntitle: \"Switzerland beats Italy\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Switzerland beats Italy\n\nItaly is out of the tournament, while Switzerland meet England or Slovakia in the next round. \n\n\n::: {.cell}\n\n:::\n\n\nThat was a surprise to everyone except Anna and Siri. Well done to you!\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"LC_COLLATE=Norwegian Bokmål_Norway.utf8;LC_CTYPE=Norwegian Bokmål_Norway.utf8;LC_MONETARY=Norwegian Bokmål_Norway.utf8;LC_NUMERIC=C;LC_TIME=Norwegian Bokmål_Norway.utf8\"\n```\n:::\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"LC_COLLATE=Norwegian Bokmål_Norway.utf8;LC_CTYPE=Norwegian Bokmål_Norway.utf8;LC_MONETARY=Norwegian Bokmål_Norway.utf8;LC_NUMERIC=C;LC_TIME=Norwegian Bokmål_Norway.utf8\"\n```\n:::\n\n::: {.cell-output-display}\n![](index_files/figure-html/knock_37-1.png){width=100%}\n:::\n:::\n\n.",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

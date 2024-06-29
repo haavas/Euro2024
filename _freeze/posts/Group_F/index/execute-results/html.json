@@ -1,0 +1,16 @@
+{
+  "hash": "56aee4e0521ed84d642e9708ac85ec3b",
+  "result": {
+    "markdown": "---\ntitle: \"End of the group stage\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [update]\nexecute:\n  echo: false\n---\n\n\n# Wednesday 26th June 2024, The group stage is over, and we split a lot of points\n\nGeorgia beating Portugal 2-0 was not the most common guess around, but it happened. Turkey beating Czeck Republic was less of a surprise. Hard to know how we fared, as these were the final games of the group stage, and all the games for the first knockout round are ready. Which means that a lot of points are distributed and a new leader emerges. Or rather, re-emerges.\n\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/graph-1.png){width=100%}\n:::\n:::\n\nØyvind came from behind with a massive score. The details must be analyzed in daylight, but it seems Øyvind and Philipp had 14 out of 16 teams for the knockout round, and 9 of them in the correct spot. As it stands, Øyvind is 41 points ahead of Dagfinn, With Jostein in third. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
