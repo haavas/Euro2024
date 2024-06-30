@@ -1,0 +1,17 @@
+{
+  "hash": "976ee00857d411e7415b0e248c47ae3f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Spain beats Georgia\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [Qualitiatve]\nexecute:\n  echo: false\n---\n\n\n# Spain is great, and Georgia is good\n\nGeorgia was a team that won many hearts, but Spain was too strong. The game ended 4-1, and Spain is now favorite to win the tournament together with Germany. The two meet in the next game. \n\n\n::: {.cell}\n\n:::\n\n\nThis game changed very little in the standings.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_39-1.png){width=100%}\n:::\n:::\n\n\nMany of us believe in England, so the standings change very little. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
