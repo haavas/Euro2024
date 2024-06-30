@@ -1,0 +1,17 @@
+{
+  "hash": "f1f6409f1a14cb933594a98124ebb2cb",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"England beats Slovakia 2-1 after extra time\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [Qualitiatve]\nexecute:\n  echo: false\n---\n\n\n# Gareth Southgate gets his 100th game as England manager\n\nEngland beats Slovakia 2-1 after a injury time goal by Bellingham and a goal by Kane in extra time, but England fails to impress again. The next game against Switzerland is wide open.\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_39-1.png){width=100%}\n:::\n:::\n\n\nMany of us believe in England, so the standings change very little. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
