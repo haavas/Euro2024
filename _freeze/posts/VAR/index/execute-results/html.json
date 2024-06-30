@@ -1,0 +1,17 @@
+{
+  "hash": "a0d54cd302051114d826069574b66cb2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"England has a goal disallowed by VAR\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [Qualitiatve]\nexecute:\n  echo: false\n---\n\n\n# VAR finds Foden offside\n\nVAR ruled that Phil Foden was offside when he scored the goal. The goal was disallowed and the score remained 1-0 to Slovakia. This game was made for a Harry Magiure red card, btw. \n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_38-1.png){width=100%}\n:::\n:::\n\n\nMost of us had this outcome, so the top changes very little. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
