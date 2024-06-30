@@ -1,0 +1,16 @@
+{
+  "hash": "1e36fd98bd101f6df929322f974a296b",
+  "result": {
+    "markdown": "---\ntitle: \"Florian Wirtz was benched against Denmark\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# More points to be had\n\nFor some, at least. Florian Wirtz did not start the game against Denmark, and the answer to the question \"During the Euros, will Florian Wirtz start a game on the bench?\" is therefore \"Yes\". Slightly more than half of us had this outcome as likely, but not Øyvind and Dagfinn, who see their lead shrink a bit. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_38-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
