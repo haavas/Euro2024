@@ -1,5 +1,5 @@
 ---
-title: "Switzerland beats Italy"
+title: "Shoesize issues eliminates Denmark"
 author: "Håvard Strand"
 date: "last-modified"
 categories: [knockout]
@@ -7,9 +7,11 @@ execute:
   echo: false
 ---
 
-# Switzerland beats Italy
+# Germany beat Denmark in the best game of the tournament so far
 
-Italy is out of the tournament, while Switzerland meet England or Slovakia in the next round. 
+It is truly odd that Denmark can both play an insanely boring game like the one against Serbia, and then play a generational game like the one against Germany. It is equally sad that one of the teams from yesterday's game must be eliminated. 
+
+
 
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
 
@@ -22,16 +24,16 @@ knitr::opts_chunk$set(out.width = "100%")
 
 ```
 
-That was a surprise to everyone except Anna and Siri. Well done to you!
+As our competition goes, many believed this outcome likely, including the entire top ten. No changes worth talking about in the top ten, in other words.
 
-```{r knock_37, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+```{r knock_38, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
 
 invisible(Sys.setlocale())
-poeng_prev <- tbl_df(read.csv("details36.csv", sep=";", header = FALSE, encoding = "utf-8"))
+poeng_prev <- tbl_df(read.csv("details37.csv", sep=";", header = FALSE, encoding = "utf-8"))
 poeng_prev$total_prev <- poeng_prev$V2 + poeng_prev$V3 + poeng_prev$V4
 poeng_prev <- poeng_prev %>% select(V1, total_prev)
 
-poeng <- tbl_df(read.csv("details37.csv", sep=";", header = FALSE))
+poeng <- tbl_df(read.csv("details38.csv", sep=";", header = FALSE))
 
 poeng$total <- poeng$V2 + poeng$V3 + poeng$V4
 

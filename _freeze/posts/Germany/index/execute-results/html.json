@@ -1,0 +1,16 @@
+{
+  "hash": "8d49c4b31077221fa68331cbcf00c13e",
+  "result": {
+    "markdown": "---\ntitle: \"Shoesize issues eliminates Denmark\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Germany beat Denmark in the best game of the tournament so far\n\nIt is truly odd that Denmark can both play an insanely boring game like the one against Serbia, and then play a generational game like the one against Germany. It is equally sad that one of the teams from yesterday's game must be eliminated. \n\n\n\n\n::: {.cell}\n\n:::\n\n\nAs our competition goes, many believed this outcome likely, including the entire top ten. No changes worth talking about in the top ten, in other words.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_38-1.png){width=100%}\n:::\n:::\n\n.",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
