@@ -1,0 +1,17 @@
+{
+  "hash": "183fa9c9a2de4246131376485530e8ab",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Portugal won on penalties\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Keepers are the heroes\n\nPortugal won, but Ronaldo missed a penalty. Hence, we still have another game to decide the winners of that particular question.\n\n\n::: {.cell}\n\n:::\n\n\nØyvind is now well in the lead, with 66 points. There are still 9 games to be played, and there are 200 points for the correct winner of the tournament, and there are many points from the qualitative questions, so we cannot make any firm calls yet. But.\n\nDagfinn did not see Portugal in the quarterfinals. Right behind him is myself, Jostein and Maiken. A bit further back is Kristoffer, Christian, Linda, Phillip and Vegard.   \n\nTomorrow might be interesting.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_41-1.png){width=100%}\n:::\n:::\n\n\nMany of us believe in England, so the standings change very little. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
