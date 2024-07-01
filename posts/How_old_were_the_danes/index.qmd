@@ -2,7 +2,7 @@
 title: "The average age of the Danish starting 11"
 author: "Håvard Strand"
 date: "last-modified"
-categories: [update]
+categories: [Qualitative]
 execute:
   echo: false
 editor: 

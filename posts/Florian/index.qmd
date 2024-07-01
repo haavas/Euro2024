@@ -2,7 +2,7 @@
 title: "Florian Wirtz was benched against Denmark"
 author: "Håvard Strand"
 date: "last-modified"
-categories: [knockout]
+categories: [Qualitative]
 execute:
   echo: false
 ---

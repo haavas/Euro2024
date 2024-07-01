@@ -2,7 +2,7 @@
 title: "Spain beats Georgia"
 author: "Håvard Strand"
 date: "last-modified"
-categories: [Qualitiatve]
+categories: [knockout]
 execute:
   echo: false
 ---

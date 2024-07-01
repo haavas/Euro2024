@@ -2,7 +2,7 @@
 title: "England beats Slovakia 2-1 after extra time"
 author: "Håvard Strand"
 date: "last-modified"
-categories: [Qualitiatve]
+categories: [knockout]
 execute:
   echo: false
 ---
