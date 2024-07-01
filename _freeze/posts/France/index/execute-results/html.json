@@ -1,0 +1,17 @@
+{
+  "hash": "15e5df90f9bac2b8fe135450cbda0c6d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"France beat Belgium\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# France beat Belgium \n\nThe less things change, the more they stay the same. France continued their underwhelming progress tonight. Mbappé did not score, and we got another own goal to our tally. \n\n\n::: {.cell}\n\n:::\n\n\nThis game changed nothing standings as far as I can see. All of us had France in the next round, but not necessarily in this particular quarter-final. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_41-1.png){width=100%}\n:::\n:::\n\n\nMany of us believe in England, so the standings change very little. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
