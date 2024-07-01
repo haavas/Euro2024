@@ -15,9 +15,10 @@ There are 15 questions in the game, and some of them have already been decided.
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
 
 library(tidyverse)
-library(igraph)
 library(readxl)
 library(knitr)
+library(ggplot2)
+library(plotly)
 
 knitr::opts_chunk$set(out.width = "100%")
 
@@ -45,7 +46,7 @@ ggplot(most_recent, aes(x = which_team_scores_the_first_goal_in_the_tournament))
 
 ```{r}
 
-Sys.setlocale()
+invisible(Sys.setlocale())
 top_scorer <- most_recent %>% 
   select(who_will_be_top_scorer_in_euro2024) %>% 
   mutate(tmp = as.integer(factor(who_will_be_top_scorer_in_euro2024))) %>% 
@@ -237,9 +238,6 @@ As it stands, it is Luka Modric, but Ronaldo is still in the tournament. Jan Erl
 ## How many goals will be scored in the tournament? 
 
 ```{r}
-library(ggplot2)
-library(tidyverse)
-library(readxl)
 
 file <- read_excel("output.xlsx")
 names(file) <- c("game", "score", "participant")
@@ -251,7 +249,7 @@ file <- file %>%
 # make a line plot in ggplot with the x-axis as the game and the y-axis as the score, for each participant
 
 # Use Plotly to create an interactive line plot where you can hover over the lines to see the name of value 'participant'
-library(plotly)
+
 
 # Assuming 'file' is the dataframe with columns 'game', 'participant', and 'score'
 
