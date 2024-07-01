@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -95,16 +102,43 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">The 2024 ISV Euro competition</span>
     </a>
@@ -116,26 +150,26 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./past_winners.html" rel="" target="">
- <span class="menu-text">Past winners</span></a>
+    <a class="nav-link" href="./past_winners.html"> 
+<span class="menu-text">Past winners</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./rules.html" rel="" target="">
- <span class="menu-text">Rules of the competition</span></a>
+    <a class="nav-link" href="./rules.html"> 
+<span class="menu-text">Rules of the competition</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -148,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -161,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(41)</span></div><div class="category" data-category="Qualitative">Qualitative <span class="quarto-category-count">(4)</span></div><div class="category" data-category="knockout">knockout <span class="quarto-category-count">(4)</span></div><div class="category" data-category="update">update <span class="quarto-category-count">(30)</span></div><div class="category" data-category="warmup">warmup <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(42)</span></div><div class="category" data-category="Qualitative">Qualitative <span class="quarto-category-count">(4)</span></div><div class="category" data-category="knockout">knockout <span class="quarto-category-count">(5)</span></div><div class="category" data-category="update">update <span class="quarto-category-count">(30)</span></div><div class="category" data-category="warmup">warmup <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -172,104 +206,33 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Qualitative" data-listing-date-sort="1719835045000" data-listing-file-modified-sort="1719835045995" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="0" data-categories="knockout" data-listing-date-sort="1719857427000" data-listing-file-modified-sort="1719857427346" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="290">
 <div class="thumbnail">
-<p><a href="./posts/Update_Qualitative/index.html"> <p class="card-img-top"><img src="posts\Update_Qualitative\index_files\figure-html\unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/France/index.html" class="no-external"></a></p><a href="./posts/France/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\France\index_files\figure-html\knock_41-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/France/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Update_Qualitative/index.html">
 <h3 class="no-anchor listing-title">
-An update on the 15 questions
+<a href="./posts/France/index.html" class="no-external">France beat Belgium</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/France/index.html" class="no-external"></a>
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Qualitative'); return false;">
-Qualitative
-</div>
-</div>
-<a href="./posts/Update_Qualitative/index.html">
-<div class="listing-description">
-There are 15 questions in the game, and some of them have already been decided.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Update_Qualitative/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Qualitative" data-listing-date-sort="1719831404000" data-listing-file-modified-sort="1719831404358" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/VAR/index.html"> <p class="card-img-top"><img src="posts\VAR\index_files\figure-html\knock_38-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/VAR/index.html">
-<h3 class="no-anchor listing-title">
-England has a goal disallowed by VAR
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Qualitative'); return false;">
-Qualitative
-</div>
-</div>
-<a href="./posts/VAR/index.html">
-<div class="listing-description">
-VAR…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/VAR/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="knockout" data-listing-date-sort="1719831039000" data-listing-file-modified-sort="1719831039495" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/Spain/index.html"> <p class="card-img-top"><img src="posts\Spain\index_files\figure-html\knock_39-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Spain/index.html">
-<h3 class="no-anchor listing-title">
-Spain beats Georgia
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('knockout'); return false;">
 knockout
 </div>
 </div>
-<a href="./posts/Spain/index.html">
 <div class="listing-description">
-Georgia was…
+<a href="./posts/France/index.html" class="no-external">The less things change, the more they stay the same. France continued their underwhelming progress tonight. Mbappé did not score, and we got another own goal to our tally.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Spain/index.html">
+<a href="./posts/France/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2024
 </div>
@@ -279,32 +242,63 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Qualitative" data-listing-date-sort="1719831009000" data-listing-file-modified-sort="1719831009367" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="1" data-categories="knockout" data-listing-date-sort="1719856769000" data-listing-file-modified-sort="1719856769582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="266">
 <div class="thumbnail">
-<p><a href="./posts/Florian/index.html"> <p class="card-img-top"><img src="posts\Florian\index_files\figure-html\knock_38-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/England/index.html" class="no-external"></a></p><a href="./posts/England/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\England\index_files\figure-html\knock_39-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/England/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Florian/index.html">
 <h3 class="no-anchor listing-title">
-Florian Wirtz was benched against Denmark
+<a href="./posts/England/index.html" class="no-external">England beats Slovakia 2-1 after extra time</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/England/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('knockout'); return false;">
+knockout
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/England/index.html" class="no-external">England beats Slovakia 2-1 after a injury time goal by Bellingham and a goal by Kane in extra time, but England fails to impress again. The next game against Switzerland is…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/England/index.html" class="no-external">
+<div class="listing-date">
+Jul 1, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Qualitative" data-listing-date-sort="1719856769000" data-listing-file-modified-sort="1719856769583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="279">
+<div class="thumbnail">
+<p><a href="./posts/Florian/index.html" class="no-external"></a></p><a href="./posts/Florian/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Florian\index_files\figure-html\knock_38-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Florian/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Florian/index.html" class="no-external">Florian Wirtz was benched against Denmark</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Florian/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Qualitative'); return false;">
 Qualitative
 </div>
 </div>
-<a href="./posts/Florian/index.html">
 <div class="listing-description">
-For some, at least. Florian Wirtz did not start the game against Denmark, and the answer to the question “During the Euros, will…
+<a href="./posts/Florian/index.html" class="no-external">For some, at least. Florian Wirtz did not start the game against Denmark, and the answer to the question “During the Euros, will Florian Wirtz start a game on the bench?” is…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Florian/index.html">
+<a href="./posts/Florian/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2024
 </div>
@@ -314,32 +308,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Qualitative" data-listing-date-sort="1719831000000" data-listing-file-modified-sort="1719831000920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="3" data-categories="Qualitative" data-listing-date-sort="1719856769000" data-listing-file-modified-sort="1719856769583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1220">
 <div class="thumbnail">
-<p><a href="./posts/How_old_were_the_danes/index.html"> <p class="card-img-top"><img src="posts\How_old_were_the_danes\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/How_old_were_the_danes/index.html" class="no-external"></a></p><a href="./posts/How_old_were_the_danes/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\How_old_were_the_danes\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/How_old_were_the_danes/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/How_old_were_the_danes/index.html">
 <h3 class="no-anchor listing-title">
-The average age of the Danish starting 11
+<a href="./posts/How_old_were_the_danes/index.html" class="no-external">The average age of the Danish starting 11</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/How_old_were_the_danes/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Qualitative'); return false;">
 Qualitative
 </div>
 </div>
-<a href="./posts/How_old_were_the_danes/index.html">
 <div class="listing-description">
-The following players
+<a href="./posts/How_old_were_the_danes/index.html" class="no-external">The following players</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/How_old_were_the_danes/index.html">
+<a href="./posts/How_old_were_the_danes/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2024
 </div>
@@ -349,32 +341,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="knockout" data-listing-date-sort="1719830914000" data-listing-file-modified-sort="1719830914623" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="4" data-categories="knockout" data-listing-date-sort="1719856769000" data-listing-file-modified-sort="1719856769584" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="277">
 <div class="thumbnail">
-<p><a href="./posts/England/index.html"> <p class="card-img-top"><img src="posts\England\index_files\figure-html\knock_39-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Spain/index.html" class="no-external"></a></p><a href="./posts/Spain/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Spain\index_files\figure-html\knock_39-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Spain/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/England/index.html">
 <h3 class="no-anchor listing-title">
-England beats Slovakia 2-1 after extra time
+<a href="./posts/Spain/index.html" class="no-external">Spain beats Georgia</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Spain/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('knockout'); return false;">
 knockout
 </div>
 </div>
-<a href="./posts/England/index.html">
 <div class="listing-description">
-England…
+<a href="./posts/Spain/index.html" class="no-external">Georgia was a team that won many hearts, but Spain was too strong. The game ended 4-1, and Spain is now favorite to win the tournament together with Germany. The two meet in…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/England/index.html">
+<a href="./posts/Spain/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2024
 </div>
@@ -384,32 +374,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="5" data-categories="Qualitative" data-listing-date-sort="1719856769000" data-listing-file-modified-sort="1719856769585" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1587">
 <div class="thumbnail">
-<p><a href="./posts/Belgium_Romania/index.html"> <p class="card-img-top"><img src="posts\Belgium_Romania\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Update_Qualitative/index.html" class="no-external"></a></p><a href="./posts/Update_Qualitative/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Update_Qualitative\index_files\figure-html\unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Update_Qualitative/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Belgium_Romania/index.html">
 <h3 class="no-anchor listing-title">
-Belgium beat Romania
+<a href="./posts/Update_Qualitative/index.html" class="no-external">An update on the 15 questions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Update_Qualitative/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
+<div class="listing-category" onclick="window.quartoListingCategory('Qualitative'); return false;">
+Qualitative
 </div>
 </div>
-<a href="./posts/Belgium_Romania/index.html">
 <div class="listing-description">
-…
+<a href="./posts/Update_Qualitative/index.html" class="no-external">There are 15 questions in the game, and some of them have already been decided.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Belgium_Romania/index.html">
+<a href="./posts/Update_Qualitative/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2024
 </div>
@@ -419,32 +407,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="6" data-categories="Qualitative" data-listing-date-sort="1719856769000" data-listing-file-modified-sort="1719856769586" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
 <div class="thumbnail">
-<p><a href="./posts/Georgia_CzechRep/index.html"> <p class="card-img-top"><img src="posts\Georgia_CzechRep\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/VAR/index.html" class="no-external"></a></p><a href="./posts/VAR/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\VAR\index_files\figure-html\knock_38-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/VAR/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Georgia_CzechRep/index.html">
 <h3 class="no-anchor listing-title">
-Georgia - Czech Republic 1-1
+<a href="./posts/VAR/index.html" class="no-external">England has a goal disallowed by VAR</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/VAR/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
+<div class="listing-category" onclick="window.quartoListingCategory('Qualitative'); return false;">
+Qualitative
 </div>
 </div>
-<a href="./posts/Georgia_CzechRep/index.html">
 <div class="listing-description">
-For either team, a loss…
+<a href="./posts/VAR/index.html" class="no-external">VAR ruled that Phil Foden was offside when he scored the goal. The goal was disallowed and the score remained 1-0 to Slovakia. This game was made for a Harry Magiure red…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Georgia_CzechRep/index.html">
+<a href="./posts/VAR/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2024
 </div>
@@ -454,34 +440,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="knockout" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="7" data-categories="knockout" data-listing-date-sort="1719747950000" data-listing-file-modified-sort="1719747950884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
 <div class="thumbnail">
-<p><a href="./posts/Germany/index.html"> <p class="card-img-top"><img src="posts\Germany\index_files\figure-html\knock_38-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Germany/index.html" class="no-external"></a></p><a href="./posts/Germany/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Germany\index_files\figure-html\knock_38-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Germany/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Germany/index.html">
 <h3 class="no-anchor listing-title">
-Shoesize issues eliminates Denmark
+<a href="./posts/Germany/index.html" class="no-external">Shoesize issues eliminates Denmark</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Germany/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('knockout'); return false;">
 knockout
 </div>
 </div>
-<a href="./posts/Germany/index.html">
 <div class="listing-description">
-It is truly odd that Denmark can both play an insanely boring…
+<a href="./posts/Germany/index.html" class="no-external">It is truly odd that Denmark can both play an insanely boring game like the one against Serbia, and then play a generational game like the one against Germany. It is equally…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Germany/index.html">
+<a href="./posts/Germany/index.html" class="no-external">
 <div class="listing-date">
-Jul 1, 2024
+Jun 30, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -489,349 +473,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="8" data-categories="knockout" data-listing-date-sort="1719747859000" data-listing-file-modified-sort="1719747859884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="251">
 <div class="thumbnail">
-<p><a href="./posts/Group_A/index.html"> <p class="card-img-top"><img src="posts\Group_A\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Switzerland/index.html" class="no-external"></a></p><a href="./posts/Switzerland/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Switzerland\index_files\figure-html\knock_37-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Switzerland/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Group_A/index.html">
 <h3 class="no-anchor listing-title">
-Group A is decided
+<a href="./posts/Switzerland/index.html" class="no-external">Switzerland beats Italy</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Switzerland/index.html" class="no-external"></a>
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Group_A/index.html">
-<div class="listing-description">
-Germany and Switzerland drew, and Hungary beat Scotland. This means that Germany and Switzerland are through to the next round, and that…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Group_A/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Group_B/index.html"> <p class="card-img-top"><img src="posts\Group_B\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Group_B/index.html">
-<h3 class="no-anchor listing-title">
-Group B was a close call
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Group_B/index.html">
-<div class="listing-description">
-Spain B beat Albania, while Italy claimed a point with the penultimate touch of the game. We feel with Croatia.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Group_B/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Group_C/index.html"> <p class="card-img-top"><img src="posts\Group_C\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Group_C/index.html">
-<h3 class="no-anchor listing-title">
-Group C is settled. Thank god it is over.
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Group_C/index.html">
-<div class="listing-description">
-England…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Group_C/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741605" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Group_D/index.html"> <p class="card-img-top"><img src="posts\Group_D\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Group_D/index.html">
-<h3 class="no-anchor listing-title">
-Group D was a howler!
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Group_D/index.html">
-<div class="listing-description">
-Austria is a very surprising winner of group D, with France in second. The Dutch are through as well, as one of the four best third placed teams.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Group_D/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741605" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Group_E/index.html"> <p class="card-img-top"><img src="posts\Group_E\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Group_E/index.html">
-<h3 class="no-anchor listing-title">
-Group E ended in stalemate
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Group_E/index.html">
-<div class="listing-description">
-Ukraina is out and Romania has won the hearts of football fans all over the world. Belgium was a dissapointment of sorts, but where…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Group_E/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="14" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741605" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/Group_F/index.html"> <p class="card-img-top"><img src="posts\Group_F\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Group_F/index.html">
-<h3 class="no-anchor listing-title">
-End of the group stage
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Group_F/index.html">
-<div class="listing-description">
-Georgia beating Portugal 2-0 was not the most common guess around, but it happened. Turkey beating Czeck Republic was less of a surprise. Hard to know how we fared, as these…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Group_F/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="15" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Netherland_France/index.html"> <p class="card-img-top"><img src="posts\Netherland_France\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Netherland_France/index.html">
-<h3 class="no-anchor listing-title">
-Netherlands - France 0-0
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Netherland_France/index.html">
-<div class="listing-description">
-VAR rescues France and Griezmann rescues the Netherlands. The game ends 0-0.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Netherland_France/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="16" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Poland_Austria/index.html"> <p class="card-img-top"><img src="posts\Poland_Austria\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Poland_Austria/index.html">
-<h3 class="no-anchor listing-title">
-Poland - Austria 1-3
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Poland_Austria/index.html">
-<div class="listing-description">
-We are probably saying godbye to Poland in this tournament. Austria is now in a good position to advance to the next round.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Poland_Austria/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="17" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741607" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Slovakia_Ukraine/index.html"> <p class="card-img-top"><img src="posts\Slovakia_Ukraine\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Slovakia_Ukraine/index.html">
-<h3 class="no-anchor listing-title">
-Slovakia - Ukraine 1-2
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Slovakia_Ukraine/index.html">
-<div class="listing-description">
-Group E is turning into a…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Slovakia_Ukraine/index.html">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="18" data-categories="knockout" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741608" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/Switzerland/index.html"> <p class="card-img-top"><img src="posts\Switzerland\index_files\figure-html\knock_37-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Switzerland/index.html">
-<h3 class="no-anchor listing-title">
-Switzerland beats Italy
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('knockout'); return false;">
 knockout
 </div>
 </div>
-<a href="./posts/Switzerland/index.html">
 <div class="listing-description">
-Italy is out of the tournament, while Switzerland meet England or Slovakia in the next round.
+<a href="./posts/Switzerland/index.html" class="no-external">Italy is out of the tournament, while Switzerland meet England or Slovakia in the next round.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Switzerland/index.html">
+<a href="./posts/Switzerland/index.html" class="no-external">
 <div class="listing-date">
-Jul 1, 2024
+Jun 30, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -839,34 +506,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="update" data-listing-date-sort="1719810741000" data-listing-file-modified-sort="1719810741608" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="update" data-listing-date-sort="1719438549000" data-listing-file-modified-sort="1719438549747" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="234">
 <div class="thumbnail">
-<p><a href="./posts/Turkey_Portugal/index.html"> <p class="card-img-top"><img src="posts\Turkey_Portugal\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Group_F/index.html" class="no-external"></a></p><a href="./posts/Group_F/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Group_F\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Group_F/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Turkey_Portugal/index.html">
 <h3 class="no-anchor listing-title">
-Portugal hammers Turkey
+<a href="./posts/Group_F/index.html" class="no-external">End of the group stage</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Group_F/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Turkey_Portugal/index.html">
 <div class="listing-description">
-Portugal does what England and France can’t. Everyone except Jon and Martin predicted this…
+<a href="./posts/Group_F/index.html" class="no-external">Georgia beating Portugal 2-0 was not the most common guess around, but it happened. Turkey beating Czeck Republic was less of a surprise. Hard to know how we fared, as these…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Turkey_Portugal/index.html">
+<a href="./posts/Group_F/index.html" class="no-external">
 <div class="listing-date">
-Jul 1, 2024
+Jun 26, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -874,34 +539,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="update" data-listing-date-sort="1718975773000" data-listing-file-modified-sort="1718975773824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-categories="update" data-listing-date-sort="1719426039000" data-listing-file-modified-sort="1719426039465" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="193">
 <div class="thumbnail">
-<p><a href="./posts/Spain_Italy/index.html"> <p class="card-img-top"><img src="posts\Spain_Italy\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Group_E/index.html" class="no-external"></a></p><a href="./posts/Group_E/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Group_E\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Group_E/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Spain_Italy/index.html">
 <h3 class="no-anchor listing-title">
-Spain - Italy 1-0
+<a href="./posts/Group_E/index.html" class="no-external">Group E ended in stalemate</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Group_E/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Spain_Italy/index.html">
 <div class="listing-description">
-Spain is through, and so is probably Italy.
+<a href="./posts/Group_E/index.html" class="no-external">Ukraina is out and Romania has won the hearts of football fans all over the world. Belgium was a dissapointment of sorts, but where England barely had a pulse, Belgium had…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Spain_Italy/index.html">
+<a href="./posts/Group_E/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 26, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -909,34 +572,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="update" data-listing-date-sort="1718974874000" data-listing-file-modified-sort="1718974874287" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="11" data-categories="update" data-listing-date-sort="1719351660000" data-listing-file-modified-sort="1719351660921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
 <div class="thumbnail">
-<p><a href="./posts/Denmark_England/index.html"> <p class="card-img-top"><img src="posts\Denmark_England\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Group_C/index.html" class="no-external"></a></p><a href="./posts/Group_C/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Group_C\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Group_C/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Denmark_England/index.html">
 <h3 class="no-anchor listing-title">
-Denmark - England 1-1
+<a href="./posts/Group_C/index.html" class="no-external">Group C is settled. Thank god it is over.</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Group_C/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Denmark_England/index.html">
 <div class="listing-description">
-Both Denmark and England are most probably thorugh with this result, but questions continue regarding England’s favorite status.
+<a href="./posts/Group_C/index.html" class="no-external">England ‘won’ Group C, and Slovaika and Denmark is through, with Denmark facing Germany due to the higher UEFA rating prior to the championship. Serbia is out, and few will…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Denmark_England/index.html">
+<a href="./posts/Group_C/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 25, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -944,34 +605,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="update" data-listing-date-sort="1718973055000" data-listing-file-modified-sort="1718973055060" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="12" data-categories="update" data-listing-date-sort="1719340000000" data-listing-file-modified-sort="1719340000001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
 <div class="thumbnail">
-<p><a href="./posts/Croatia_Albania/index.html"> <p class="card-img-top"><img src="posts\Croatia_Albania\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Group_D/index.html" class="no-external"></a></p><a href="./posts/Group_D/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Group_D\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Group_D/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Croatia_Albania/index.html">
 <h3 class="no-anchor listing-title">
-A draw between Croatia and Albania
+<a href="./posts/Group_D/index.html" class="no-external">Group D was a howler!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Group_D/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Croatia_Albania/index.html">
 <div class="listing-description">
-Five persons predicted a draw in this game, and the narrow fields means that the standings change quite a lot. Philipp jumped up…
+<a href="./posts/Group_D/index.html" class="no-external">Austria is a very surprising winner of group D, with France in second. The Dutch are through as well, as one of the four best third placed teams.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Croatia_Albania/index.html">
+<a href="./posts/Group_D/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 25, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -979,34 +638,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="update" data-listing-date-sort="1718973055000" data-listing-file-modified-sort="1718973055064" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="update" data-listing-date-sort="1719266849000" data-listing-file-modified-sort="1719266849978" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
 <div class="thumbnail">
-<p><a href="./posts/Germany_Hungary/index.html"> <p class="card-img-top"><img src="posts\Germany_Hungary\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Group_B/index.html" class="no-external"></a></p><a href="./posts/Group_B/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Group_B\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Group_B/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Germany_Hungary/index.html">
 <h3 class="no-anchor listing-title">
-Germany is the first team to qualify for the knockout stage
+<a href="./posts/Group_B/index.html" class="no-external">Group B was a close call</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Group_B/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Germany_Hungary/index.html">
 <div class="listing-description">
-Germany, habitually, beat Hungary 2-0 and are through to the knockout stage
+<a href="./posts/Group_B/index.html" class="no-external">Spain B beat Albania, while Italy claimed a point with the penultimate touch of the game. We feel with Croatia.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Germany_Hungary/index.html">
+<a href="./posts/Group_B/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 25, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -1014,34 +671,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="update" data-listing-date-sort="1718973055000" data-listing-file-modified-sort="1718973055065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="14" data-categories="update" data-listing-date-sort="1719178169000" data-listing-file-modified-sort="1719178169373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="247">
 <div class="thumbnail">
-<p><a href="./posts/Portugal_CzechRepublic/index.html"> <p class="card-img-top"><img src="posts\Portugal_CzechRepublic\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Group_A/index.html" class="no-external"></a></p><a href="./posts/Group_A/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Group_A\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Group_A/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Portugal_CzechRepublic/index.html">
 <h3 class="no-anchor listing-title">
-Portugal vs.&nbsp;Czeck Republic
+<a href="./posts/Group_A/index.html" class="no-external">Group A is decided</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Group_A/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Portugal_CzechRepublic/index.html">
 <div class="listing-description">
-Portugal won, almost everyone thought they would and the standings change very little. Nina is now a point ahead of Dagfinn in third.
+<a href="./posts/Group_A/index.html" class="no-external">Germany and Switzerland drew, and Hungary beat Scotland. This means that Germany and Switzerland are through to the next round, and that Hungary has to wait for the other…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Portugal_CzechRepublic/index.html">
+<a href="./posts/Group_A/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 23, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -1049,34 +704,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="update" data-listing-date-sort="1718973055000" data-listing-file-modified-sort="1718973055065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="15" data-categories="update" data-listing-date-sort="1719093569000" data-listing-file-modified-sort="1719093569645" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
 <div class="thumbnail">
-<p><a href="./posts/Scotland_Switzerland/index.html"> <p class="card-img-top"><img data-src="posts\Scotland_Switzerland\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Belgium_Romania/index.html" class="no-external"></a></p><a href="./posts/Belgium_Romania/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Belgium_Romania\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Belgium_Romania/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Scotland_Switzerland/index.html">
 <h3 class="no-anchor listing-title">
-Scotland - Switzerland 1-1
+<a href="./posts/Belgium_Romania/index.html" class="no-external">Belgium beat Romania</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Belgium_Romania/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Scotland_Switzerland/index.html">
 <div class="listing-description">
-Interesting turn of events! Halvard is still in the lead, but behind him…
+<a href="./posts/Belgium_Romania/index.html" class="no-external">Despite Belgium’s tragic first game and Romania’s fantastic game against Ukraine, Belgium won the game hansomly. Lukaku had yet another goal disallowed. The group is wide…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Scotland_Switzerland/index.html">
+<a href="./posts/Belgium_Romania/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 22, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -1084,34 +737,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="update" data-listing-date-sort="1718973055000" data-listing-file-modified-sort="1718973055066" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="16" data-categories="update" data-listing-date-sort="1719093156000" data-listing-file-modified-sort="1719093156615" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
 <div class="thumbnail">
-<p><a href="./posts/Slovenia_Serbia/index.html"> <p class="card-img-top"><img data-src="posts\Slovenia_Serbia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Turkey_Portugal/index.html" class="no-external"></a></p><a href="./posts/Turkey_Portugal/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Turkey_Portugal\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Turkey_Portugal/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Slovenia_Serbia/index.html">
 <h3 class="no-anchor listing-title">
-Scotland - Switzerland 1-1
+<a href="./posts/Turkey_Portugal/index.html" class="no-external">Portugal hammers Turkey</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Turkey_Portugal/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Slovenia_Serbia/index.html">
 <div class="listing-description">
-Interesting turn of events! Halvard is still in the lead, but behind him…
+<a href="./posts/Turkey_Portugal/index.html" class="no-external">Portugal does what England and France can’t. Everyone except Jon and Martin predicted this outcome, which means that the standings change very little. Dagfinn and Vegard are…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Slovenia_Serbia/index.html">
+<a href="./posts/Turkey_Portugal/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 22, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -1119,34 +770,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="update" data-listing-date-sort="1718973055000" data-listing-file-modified-sort="1718973055067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="17" data-categories="update" data-listing-date-sort="1719092717000" data-listing-file-modified-sort="1719092717006" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
 <div class="thumbnail">
-<p><a href="./posts/Turkey_Georgia/index.html"> <p class="card-img-top"><img data-src="posts\Turkey_Georgia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Georgia_CzechRep/index.html" class="no-external"></a></p><a href="./posts/Georgia_CzechRep/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Georgia_CzechRep\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Georgia_CzechRep/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Turkey_Georgia/index.html">
 <h3 class="no-anchor listing-title">
-Turkey beat Georgia
+<a href="./posts/Georgia_CzechRep/index.html" class="no-external">Georgia - Czech Republic 1-1</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Georgia_CzechRep/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Turkey_Georgia/index.html">
 <div class="listing-description">
-Many thought Turkey would beat Georgia. Among them football genius Halvard.…
+<a href="./posts/Georgia_CzechRep/index.html" class="no-external">For either team, a loss would mean elimination. A draw would keep both teams in the tournament, but they would need to win their last game to advance. Georgia in particular…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Turkey_Georgia/index.html">
+<a href="./posts/Georgia_CzechRep/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 22, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -1154,34 +803,32 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="update" data-listing-date-sort="1718973052000" data-listing-file-modified-sort="1718973052645" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="18" data-categories="update" data-listing-date-sort="1719009998000" data-listing-file-modified-sort="1719009998324" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
 <div class="thumbnail">
-<p><a href="./posts/Belgium_Slovakia/index.html"> <p class="card-img-top"><img data-src="posts\Belgium_Slovakia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Netherland_France/index.html" class="no-external"></a></p><a href="./posts/Netherland_France/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Netherland_France\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Netherland_France/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Belgium_Slovakia/index.html">
 <h3 class="no-anchor listing-title">
-What was that?
+<a href="./posts/Netherland_France/index.html" class="no-external">Netherlands - France 0-0</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Netherland_France/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Belgium_Slovakia/index.html">
 <div class="listing-description">
-The color of love, the color of blood The color of roses, the color of mud The color of passion, the color of fire The color of anger, the color of desire The color of…
+<a href="./posts/Netherland_France/index.html" class="no-external">VAR rescues France and Griezmann rescues the Netherlands. The game ends 0-0.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Belgium_Slovakia/index.html">
+<a href="./posts/Netherland_France/index.html" class="no-external">
 <div class="listing-date">
-Jun 21, 2024
+Jun 22, 2024
 </div>
 <div class="listing-author">
 Håvard Strand
@@ -1189,32 +836,360 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="update" data-listing-date-sort="1718713202000" data-listing-file-modified-sort="1718713202411" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="19" data-categories="update" data-listing-date-sort="1719009457000" data-listing-file-modified-sort="1719009457064" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="151">
 <div class="thumbnail">
-<p><a href="./posts/France_Austria/index.html"> <p class="card-img-top"><img data-src="posts\France_Austria\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Poland_Austria/index.html" class="no-external"></a></p><a href="./posts/Poland_Austria/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Poland_Austria\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Poland_Austria/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/France_Austria/index.html">
 <h3 class="no-anchor listing-title">
-Franzzzzzzzzz
+<a href="./posts/Poland_Austria/index.html" class="no-external">Poland - Austria 1-3</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Poland_Austria/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/France_Austria/index.html">
 <div class="listing-description">
-In a modern…
+<a href="./posts/Poland_Austria/index.html" class="no-external">We are probably saying godbye to Poland in this tournament. Austria is now in a good position to advance to the next round.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Poland_Austria/index.html" class="no-external">
+<div class="listing-date">
+Jun 22, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
 </div>
 </a>
 </div>
+</div>
+<div class="quarto-post image-right" data-index="20" data-categories="update" data-listing-date-sort="1719009036000" data-listing-file-modified-sort="1719009036359" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="176">
+<div class="thumbnail">
+<p><a href="./posts/Slovakia_Ukraine/index.html" class="no-external"></a></p><a href="./posts/Slovakia_Ukraine/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Slovakia_Ukraine\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Slovakia_Ukraine/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Slovakia_Ukraine/index.html" class="no-external">Slovakia - Ukraine 1-2</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Slovakia_Ukraine/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Slovakia_Ukraine/index.html" class="no-external">Group E is turning into a heated affair. If Belgium wins against Romania tomorrow, it is a matter of goal difference. If Belgium fails to win, they are in trouble, which has…</a>
+</div>
+</div>
 <div class="metadata">
-<a href="./posts/France_Austria/index.html">
+<a href="./posts/Slovakia_Ukraine/index.html" class="no-external">
+<div class="listing-date">
+Jun 22, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="21" data-categories="update" data-listing-date-sort="1719008451000" data-listing-file-modified-sort="1719008451756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
+<div class="thumbnail">
+<p><a href="./posts/Denmark_England/index.html" class="no-external"></a></p><a href="./posts/Denmark_England/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Denmark_England\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Denmark_England/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Denmark_England/index.html" class="no-external">Denmark - England 1-1</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Denmark_England/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Denmark_England/index.html" class="no-external">Both Denmark and England are most probably thorugh with this result, but questions continue regarding England’s favorite status.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Denmark_England/index.html" class="no-external">
+<div class="listing-date">
+Jun 22, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="22" data-categories="update" data-listing-date-sort="1719008451000" data-listing-file-modified-sort="1719008451756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
+<div class="thumbnail">
+<p><a href="./posts/Spain_Italy/index.html" class="no-external"></a></p><a href="./posts/Spain_Italy/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Spain_Italy\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Spain_Italy/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Spain_Italy/index.html" class="no-external">Spain - Italy 1-0</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Spain_Italy/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Spain_Italy/index.html" class="no-external">Spain is through, and so is probably Italy.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Spain_Italy/index.html" class="no-external">
+<div class="listing-date">
+Jun 22, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="23" data-categories="update" data-listing-date-sort="1718837908000" data-listing-file-modified-sort="1718837908602" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="156">
+<div class="thumbnail">
+<p><a href="./posts/Scotland_Switzerland/index.html" class="no-external"></a></p><a href="./posts/Scotland_Switzerland/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Scotland_Switzerland\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Scotland_Switzerland/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Scotland_Switzerland/index.html" class="no-external">Scotland - Switzerland 1-1</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Scotland_Switzerland/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Scotland_Switzerland/index.html" class="no-external">Interesting turn of events! Halvard is still in the lead, but behind him, the competition is fierce. Nina and Dagfinn are again tied, this time in second place, but 11…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Scotland_Switzerland/index.html" class="no-external">
+<div class="listing-date">
+Jun 20, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="24" data-categories="update" data-listing-date-sort="1718837908000" data-listing-file-modified-sort="1718837908602" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="156">
+<div class="thumbnail">
+<p><a href="./posts/Slovenia_Serbia/index.html" class="no-external"></a></p><a href="./posts/Slovenia_Serbia/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Slovenia_Serbia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Slovenia_Serbia/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Slovenia_Serbia/index.html" class="no-external">Scotland - Switzerland 1-1</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Slovenia_Serbia/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Slovenia_Serbia/index.html" class="no-external">Interesting turn of events! Halvard is still in the lead, but behind him, the competition is fierce. Nina and Dagfinn are again tied, this time in second place, but 11…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Slovenia_Serbia/index.html" class="no-external">
+<div class="listing-date">
+Jun 20, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="25" data-categories="update" data-listing-date-sort="1718828371000" data-listing-file-modified-sort="1718828371457" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
+<div class="thumbnail">
+<p><a href="./posts/Germany_Hungary/index.html" class="no-external"></a></p><a href="./posts/Germany_Hungary/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Germany_Hungary\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Germany_Hungary/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Germany_Hungary/index.html" class="no-external">Germany is the first team to qualify for the knockout stage</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Germany_Hungary/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Germany_Hungary/index.html" class="no-external">Germany, habitually, beat Hungary 2-0 and are through to the knockout stage</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Germany_Hungary/index.html" class="no-external">
+<div class="listing-date">
+Jun 19, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="26" data-categories="update" data-listing-date-sort="1718827876000" data-listing-file-modified-sort="1718827876389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="166">
+<div class="thumbnail">
+<p><a href="./posts/Croatia_Albania/index.html" class="no-external"></a></p><a href="./posts/Croatia_Albania/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Croatia_Albania\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Croatia_Albania/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Croatia_Albania/index.html" class="no-external">A draw between Croatia and Albania</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Croatia_Albania/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Croatia_Albania/index.html" class="no-external">Five persons predicted a draw in this game, and the narrow fields means that the standings change quite a lot. Philipp jumped up to third place, while Miro is in fifth. Jon…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Croatia_Albania/index.html" class="no-external">
+<div class="listing-date">
+Jun 19, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="27" data-categories="update" data-listing-date-sort="1718795413000" data-listing-file-modified-sort="1718795413312" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
+<div class="thumbnail">
+<p><a href="./posts/Turkey_Georgia/index.html" class="no-external"></a></p><a href="./posts/Turkey_Georgia/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Turkey_Georgia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Turkey_Georgia/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Turkey_Georgia/index.html" class="no-external">Turkey beat Georgia</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Turkey_Georgia/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Turkey_Georgia/index.html" class="no-external">Many thought Turkey would beat Georgia. Among them football genius Halvard. Øyvind Colbjørnsen stumbled, so we have a clear leader. The OPA trio Jostein, Jan Erling and…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Turkey_Georgia/index.html" class="no-external">
+<div class="listing-date">
+Jun 19, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="28" data-categories="update" data-listing-date-sort="1718795388000" data-listing-file-modified-sort="1718795388101" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
+<div class="thumbnail">
+<p><a href="./posts/Portugal_CzechRepublic/index.html" class="no-external"></a></p><a href="./posts/Portugal_CzechRepublic/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Portugal_CzechRepublic\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Portugal_CzechRepublic/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Portugal_CzechRepublic/index.html" class="no-external">Portugal vs.&nbsp;Czeck Republic</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Portugal_CzechRepublic/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Portugal_CzechRepublic/index.html" class="no-external">Portugal won, almost everyone thought they would and the standings change very little. Nina is now a point ahead of Dagfinn in third.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Portugal_CzechRepublic/index.html" class="no-external">
+<div class="listing-date">
+Jun 19, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="29" data-categories="update" data-listing-date-sort="1718663094000" data-listing-file-modified-sort="1718663094922" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
+<div class="thumbnail">
+<p><a href="./posts/France_Austria/index.html" class="no-external"></a></p><a href="./posts/France_Austria/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\France_Austria\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/France_Austria/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/France_Austria/index.html" class="no-external">Franzzzzzzzzz</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/France_Austria/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/France_Austria/index.html" class="no-external">In a modern replay of Austerlitz France beat Austria. Following England’s yawn-inspiring win, France showed that they are a team that can lose against virtually anyone, but…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/France_Austria/index.html" class="no-external">
 <div class="listing-date">
 Jun 18, 2024
 </div>
@@ -1224,67 +1199,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="update" data-listing-date-sort="1718713202000" data-listing-file-modified-sort="1718713202415" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="30" data-categories="update" data-listing-date-sort="1718648205000" data-listing-file-modified-sort="1718648205178" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="305">
 <div class="thumbnail">
-<p><a href="./posts/Romania_Ukraine/index.html"> <p class="card-img-top"><img data-src="posts\Romania_Ukraine\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Belgium_Slovakia/index.html" class="no-external"></a></p><a href="./posts/Belgium_Slovakia/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Belgium_Slovakia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Belgium_Slovakia/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Romania_Ukraine/index.html">
 <h3 class="no-anchor listing-title">
-Romania trash Ukraine
+<a href="./posts/Belgium_Slovakia/index.html" class="no-external">What was that?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Belgium_Slovakia/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Romania_Ukraine/index.html">
 <div class="listing-description">
-While Ukraine had the ball, Romania scored three goals. Not bad.
+<a href="./posts/Belgium_Slovakia/index.html" class="no-external">The color of love, the color of blood The color of roses, the color of mud The color of passion, the color of fire The color of anger, the color of desire The color of…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Romania_Ukraine/index.html">
-<div class="listing-date">
-Jun 18, 2024
-</div>
-<div class="listing-author">
-Håvard Strand
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="31" data-categories="update" data-listing-date-sort="1718621063000" data-listing-file-modified-sort="1718621063258" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Serbia_England/index.html"> <p class="card-img-top"><img data-src="posts\Serbia_England\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Serbia_England/index.html">
-<h3 class="no-anchor listing-title">
-England beats Serbia
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
-update
-</div>
-</div>
-<a href="./posts/Serbia_England/index.html">
-<div class="listing-description">
-England was the bookmaker’s favorite to win EURO2024, but this game did not bolster their standings. Serbia could easily have left with something from the game.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Serbia_England/index.html">
+<a href="./posts/Belgium_Slovakia/index.html" class="no-external">
 <div class="listing-date">
 Jun 17, 2024
 </div>
@@ -1294,32 +1232,96 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="32" data-categories="update" data-listing-date-sort="1718488800000" data-listing-file-modified-sort="1718620996213" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="31" data-categories="update" data-listing-date-sort="1718647383000" data-listing-file-modified-sort="1718647383662" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
 <div class="thumbnail">
-<p><a href="./posts/Poland_Netherlands/index.html"> <p class="card-img-top"><img data-src="posts\Poland_Netherlands\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Romania_Ukraine/index.html" class="no-external"></a></p><a href="./posts/Romania_Ukraine/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Romania_Ukraine\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Romania_Ukraine/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Poland_Netherlands/index.html">
 <h3 class="no-anchor listing-title">
-Poland vs Netherlands
+<a href="./posts/Romania_Ukraine/index.html" class="no-external">Romania trash Ukraine</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Romania_Ukraine/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Poland_Netherlands/index.html">
 <div class="listing-description">
-The Netherlands won, as many of us had predicted. No significant changes in the front, but Øyvind remain in the lead.
+<a href="./posts/Romania_Ukraine/index.html" class="no-external">While Ukraine had the ball, Romania scored three goals. Not bad.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Romania_Ukraine/index.html" class="no-external">
+<div class="listing-date">
+Jun 17, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
 </div>
 </a>
 </div>
+</div>
+<div class="quarto-post image-right" data-index="32" data-categories="update" data-listing-date-sort="1718647014000" data-listing-file-modified-sort="1718647014303" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
+<div class="thumbnail">
+<p><a href="./posts/Serbia_England/index.html" class="no-external"></a></p><a href="./posts/Serbia_England/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Serbia_England\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Serbia_England/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Serbia_England/index.html" class="no-external">England beats Serbia</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Serbia_England/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Serbia_England/index.html" class="no-external">England was the bookmaker’s favorite to win EURO2024, but this game did not bolster their standings. Serbia could easily have left with something from the game.</a>
+</div>
+</div>
 <div class="metadata">
-<a href="./posts/Poland_Netherlands/index.html">
+<a href="./posts/Serbia_England/index.html" class="no-external">
+<div class="listing-date">
+Jun 17, 2024
+</div>
+<div class="listing-author">
+Håvard Strand
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="33" data-categories="update" data-listing-date-sort="1718488800000" data-listing-file-modified-sort="1718562288680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
+<div class="thumbnail">
+<p><a href="./posts/Poland_Netherlands/index.html" class="no-external"></a></p><a href="./posts/Poland_Netherlands/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Poland_Netherlands\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Poland_Netherlands/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Poland_Netherlands/index.html" class="no-external">Poland vs Netherlands</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Poland_Netherlands/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
+update
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Poland_Netherlands/index.html" class="no-external">The Netherlands won, as many of us had predicted. No significant changes in the front, but Øyvind remain in the lead.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Poland_Netherlands/index.html" class="no-external">
 <div class="listing-date">
 Jun 16, 2024
 </div>
@@ -1329,32 +1331,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="33" data-categories="update" data-listing-date-sort="1718488800000" data-listing-file-modified-sort="1718620996214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="34" data-categories="update" data-listing-date-sort="1718488800000" data-listing-file-modified-sort="1718562325058" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="219">
 <div class="thumbnail">
-<p><a href="./posts/Slovenia_Denmark/index.html"> <p class="card-img-top"><img data-src="posts\Slovenia_Denmark\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Slovenia_Denmark/index.html" class="no-external"></a></p><a href="./posts/Slovenia_Denmark/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Slovenia_Denmark\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Slovenia_Denmark/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Slovenia_Denmark/index.html">
 <h3 class="no-anchor listing-title">
-Hjulmand out!
+<a href="./posts/Slovenia_Denmark/index.html" class="no-external">Hjulmand out!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Slovenia_Denmark/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Slovenia_Denmark/index.html">
 <div class="listing-description">
-Denmark failed to win against Slovenia, and the blame must be put on the shoulders of the Danish coach, Hjulmand. As the game developed, it was evident that Denmark…
+<a href="./posts/Slovenia_Denmark/index.html" class="no-external">Denmark failed to win against Slovenia, and the blame must be put on the shoulders of the Danish coach, Hjulmand. As the game developed, it was evident that Denmark didn’t…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Slovenia_Denmark/index.html">
+<a href="./posts/Slovenia_Denmark/index.html" class="no-external">
 <div class="listing-date">
 Jun 16, 2024
 </div>
@@ -1364,32 +1364,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="34" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718620996212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="35" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718485243458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
 <div class="thumbnail">
-<p><a href="./posts/Germany_Scotland/index.html"> <p class="card-img-top"><img data-src="posts\Germany_Scotland\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Germany_Scotland/index.html" class="no-external"></a></p><a href="./posts/Germany_Scotland/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Germany_Scotland\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Germany_Scotland/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Germany_Scotland/index.html">
 <h3 class="no-anchor listing-title">
-Germany vs Scotland
+<a href="./posts/Germany_Scotland/index.html" class="no-external">Germany vs Scotland</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Germany_Scotland/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Germany_Scotland/index.html">
 <div class="listing-description">
-Germany beat Scotland 5-1 as we celebrate summer and the start of the European Championship.
+<a href="./posts/Germany_Scotland/index.html" class="no-external">Germany beat Scotland 5-1 as we celebrate summer and the start of the European Championship.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Germany_Scotland/index.html">
+<a href="./posts/Germany_Scotland/index.html" class="no-external">
 <div class="listing-date">
 Jun 15, 2024
 </div>
@@ -1399,32 +1397,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="35" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718620996212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="36" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718485695760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
 <div class="thumbnail">
-<p><a href="./posts/Italia_Albania/index.html"> <p class="card-img-top"><img data-src="posts\Italia_Albania\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Italia_Albania/index.html" class="no-external"></a></p><a href="./posts/Italia_Albania/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Italia_Albania\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Italia_Albania/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Italia_Albania/index.html">
 <h3 class="no-anchor listing-title">
-Italy beat Albania
+<a href="./posts/Italia_Albania/index.html" class="no-external">Italy beat Albania</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Italia_Albania/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Italia_Albania/index.html">
 <div class="listing-description">
-Italia won, but conceded a goal after 23 seconds. That must hurt.
+<a href="./posts/Italia_Albania/index.html" class="no-external">Italia won, but conceded a goal after 23 seconds. That must hurt.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Italia_Albania/index.html">
+<a href="./posts/Italia_Albania/index.html" class="no-external">
 <div class="listing-date">
 Jun 15, 2024
 </div>
@@ -1434,32 +1430,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="36" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718620996214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="37" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718485243459" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
 <div class="thumbnail">
-<p><a href="./posts/Spain_Croatia/index.html"> <p class="card-img-top"><img data-src="posts\Spain_Croatia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Spain_Croatia/index.html" class="no-external"></a></p><a href="./posts/Spain_Croatia/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Spain_Croatia\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Spain_Croatia/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Spain_Croatia/index.html">
 <h3 class="no-anchor listing-title">
-Spain beat Croatia
+<a href="./posts/Spain_Croatia/index.html" class="no-external">Spain beat Croatia</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Spain_Croatia/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Spain_Croatia/index.html">
 <div class="listing-description">
-Spain beat…
+<a href="./posts/Spain_Croatia/index.html" class="no-external">Spain beat Croatia, but the score did not reflect what was a fairly evenly played game. Rodri was spared a red card by QAR intervention. Always nice to know that certains…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Spain_Croatia/index.html">
+<a href="./posts/Spain_Croatia/index.html" class="no-external">
 <div class="listing-date">
 Jun 15, 2024
 </div>
@@ -1469,32 +1463,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="37" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718620996214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="38" data-categories="update" data-listing-date-sort="1718402400000" data-listing-file-modified-sort="1718485243459" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="162">
 <div class="thumbnail">
-<p><a href="./posts/Switzerland_Hungary/index.html"> <p class="card-img-top"><img data-src="posts\Switzerland_Hungary\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Switzerland_Hungary/index.html" class="no-external"></a></p><a href="./posts/Switzerland_Hungary/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Switzerland_Hungary\index_files\figure-html\graph-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Switzerland_Hungary/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Switzerland_Hungary/index.html">
 <h3 class="no-anchor listing-title">
-Hungary vs Switzerland
+<a href="./posts/Switzerland_Hungary/index.html" class="no-external">Hungary vs Switzerland</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Switzerland_Hungary/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('update'); return false;">
 update
 </div>
 </div>
-<a href="./posts/Switzerland_Hungary/index.html">
 <div class="listing-description">
-Switzerland won against Hungary. Øyvind is in the lead, with Philipp, Halvqrd and Jacob five points behind. On the other end of the scale, we are all in the positive range.
+<a href="./posts/Switzerland_Hungary/index.html" class="no-external">Switzerland won against Hungary. Øyvind is in the lead, with Philipp, Halvqrd and Jacob five points behind. On the other end of the scale, we are all in the positive range.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Switzerland_Hungary/index.html">
+<a href="./posts/Switzerland_Hungary/index.html" class="no-external">
 <div class="listing-date">
 Jun 15, 2024
 </div>
@@ -1504,32 +1496,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="38" data-categories="warmup" data-listing-date-sort="1718229600000" data-listing-file-modified-sort="1718620996211" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="39" data-categories="warmup" data-listing-date-sort="1718229600000" data-listing-file-modified-sort="1718488582482" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="721">
 <div class="thumbnail">
-<p><a href="./posts/About_the_competiton/index.html"> <p class="card-img-top"><img data-src="posts\About_the_competiton\index_files\figure-html\unnamed-chunk-1-1.svg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/About_the_competiton/index.html" class="no-external"></a></p><a href="./posts/About_the_competiton/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\About_the_competiton\index_files\figure-html\unnamed-chunk-1-1.svg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/About_the_competiton/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/About_the_competiton/index.html">
 <h3 class="no-anchor listing-title">
-A few words about the competiton
+<a href="./posts/About_the_competiton/index.html" class="no-external">A few words about the competiton</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/About_the_competiton/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('warmup'); return false;">
 warmup
 </div>
 </div>
-<a href="./posts/About_the_competiton/index.html">
 <div class="listing-description">
-“The competition is a great opportunity to…
+<a href="./posts/About_the_competiton/index.html" class="no-external">“The competition is a great opportunity to learn new things and to test your skills. It is also a great way to meet new people and to have fun. I hope you will enjoy it and…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/About_the_competiton/index.html">
+<a href="./posts/About_the_competiton/index.html" class="no-external">
 <div class="listing-date">
 Jun 13, 2024
 </div>
@@ -1539,32 +1529,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="39" data-categories="warmup" data-listing-date-sort="1718229600000" data-listing-file-modified-sort="1718284028089" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="40" data-categories="warmup" data-listing-date-sort="1718229600000" data-listing-file-modified-sort="1718470293641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="223">
 <div class="thumbnail">
-<p><a href="./posts/Harry/index.html"> <p class="card-img-top"><img data-src="posts\Harry\Maguire-England-final-770x615.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/Harry/index.html" class="no-external"></a></p><a href="./posts/Harry/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\Harry\Maguire-England-final-770x615.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Harry/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Harry/index.html">
 <h3 class="no-anchor listing-title">
-Harry Maguire is out!
+<a href="./posts/Harry/index.html" class="no-external">Harry Maguire is out!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Harry/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('warmup'); return false;">
 warmup
 </div>
 </div>
-<a href="./posts/Harry/index.html">
 <div class="listing-description">
-It has been announced that Harry Maguire will not be part of England’s EURO squad, much to the relief of opposing teams who were worried about being defended by a man who…
+<a href="./posts/Harry/index.html" class="no-external">It has been announced that Harry Maguire will not be part of England’s EURO squad, much to the relief of opposing teams who were worried about being defended by a man who…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Harry/index.html">
+<a href="./posts/Harry/index.html" class="no-external">
 <div class="listing-date">
 Jun 13, 2024
 </div>
@@ -1574,32 +1562,30 @@ Håvard Strand
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="40" data-categories="warmup" data-listing-date-sort="1718229600000" data-listing-file-modified-sort="1718284146925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="41" data-categories="warmup" data-listing-date-sort="1718229600000" data-listing-file-modified-sort="1718470293644" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1116">
 <div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <p class="card-img-top"><img data-src="posts\welcome\Winner2021.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
+<p class="card-img-top"><img data-src="posts\welcome\Winner2021.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/welcome/index.html">
 <h3 class="no-anchor listing-title">
-Welcome To the ISV Euro 2024 Competition!
+<a href="./posts/welcome/index.html" class="no-external">Welcome To the ISV Euro 2024 Competition!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/welcome/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('warmup'); return false;">
 warmup
 </div>
 </div>
-<a href="./posts/welcome/index.html">
 <div class="listing-description">
-Hi and welcome to the competition. While we wait for VAR, we can take a quick review of the past competitions.
+<a href="./posts/welcome/index.html" class="no-external">Hi and welcome to the competition. While we wait for VAR, we can take a quick review of the past competitions.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/welcome/index.html">
+<a href="./posts/welcome/index.html" class="no-external">
 <div class="listing-date">
 Jun 13, 2024
 </div>
@@ -1696,10 +1682,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1709,8 +1712,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1722,7 +1734,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1766,6 +1901,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1791,6 +1927,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1851,6 +2013,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
