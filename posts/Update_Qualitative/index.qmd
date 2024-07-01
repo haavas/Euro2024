@@ -1,0 +1,277 @@
+---
+title: "An update on the 15 questions"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [Qualitative]
+execute:
+  echo: false
+---
+
+# Knowledge is power, and points.
+
+There are 15 questions in the game, and some of them have already been decided.
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(igraph)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+load("./most_recent.RData")
+
+
+
+
+```
+
+## Which team scores the first goal in the tournament? [Decided]
+
+The answer was Germany, as most of us guessed.
+
+
+```{r}
+ggplot(most_recent, aes(x = which_team_scores_the_first_goal_in_the_tournament)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Team")
+
+```
+
+## Who will be top scorer in EURO2024?
+
+```{r}
+
+Sys.setlocale()
+top_scorer <- most_recent %>% 
+  select(who_will_be_top_scorer_in_euro2024) %>% 
+  mutate(tmp = as.integer(factor(who_will_be_top_scorer_in_euro2024))) %>% 
+  mutate(Top_Scorer = case_when(
+    tmp == 1 ~ "Cristiano Ronaldo",
+    tmp == 2 ~ "Phil Foden",
+    tmp == 3 ~ "Antoine Griezmann",
+    tmp == 4 ~ "Harry Kane",
+    tmp == 5 ~ "Harry Kane",
+    tmp == 7 ~ "Harry Kane",
+    tmp == 6 ~ "Kai Havertz",
+    tmp == 8 ~ "Kylian Mbappé",
+    tmp == 9 ~ "Kylian Mbappé",
+    tmp == 10 ~ "Kylian Mbappé",
+    tmp == 11 ~ "Kylian Mbappé",
+    tmp == 12 ~ "Kylian Mbappé",
+    tmp == 13 ~ "Kylian Mbappé",
+    tmp == 14 ~ "Romelu Lukaku",
+    tmp == 15 ~ "Thomas Müller",
+    tmp == 16 ~ "Vaclav Cerny"))
+
+ggplot(top_scorer, aes(x = Top_Scorer)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Top Scorer")
+```
+
+The modal answer is Kylian Mbappé, but Harry Kane is also a popular choice, with Lukaku in thrid.
+
+Havertz and Kane have two each, Mbappé has one, and the rest have none. Mikautadze, Musiala and Schranz have all three goals each, but only Musiala is likely to add to that tally.
+
+As it stands, we gain no points from this question
+
+## Who will be assist king in EURO2024?
+
+```{r}
+Sys.setlocale()
+assist_king <- most_recent %>% 
+  select(who_will_be_assist_king_span_style_font_size_17_6px_font_style_normal_font_weight_400_in_euro2024_span) %>% 
+  mutate(tmp = as.integer(factor(who_will_be_assist_king_span_style_font_size_17_6px_font_style_normal_font_weight_400_in_euro2024_span))) %>% 
+  mutate(Assist_King = case_when(
+    tmp == 1 ~ "Jude Bellingham",
+    tmp == 14 ~ "Jude Bellingham",
+    tmp == 2 ~ "Bruno Fernandes",
+    tmp == 3 ~ "Bruno Fernandes",
+    tmp == 4 ~ "Bruno Fernandes",
+    tmp == 9 ~ "Bruno Fernandes",
+    tmp == 10 ~ "Bruno Fernandes",
+    tmp == 5 ~ "Bukayo Saka",
+    tmp == 6 ~ "Kevin De Bruyne",
+    tmp == 7 ~ "Kevin De Bruyne",
+    tmp == 15 ~ "Kevin De Bruyne",
+    tmp == 16 ~ "Kevin De Bruyne",
+    tmp == 17 ~ "Kevin De Bruyne",
+    tmp == 8 ~ "Denzel Dumfries",
+    tmp == 12 ~ "Harry Kane",
+    tmp == 13 ~ "Jamal Musiala",
+    tmp == 11 ~ "Antoine Griezmann",
+    tmp == 18 ~ "Kylian Mbappé",
+    tmp == 19 ~ "Memphis Depay",
+    tmp == 20 ~ "Ollie Watkins",
+    tmp == 21 ~ "Patrik Schick",
+    tmp == 22 ~ "Phil Foden",
+    tmp == 23 ~ "Toni Kroos"))
+
+ggplot(assist_king, aes(x = Assist_King)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Top Scorer")
+```
+
+More variation in these answers, but Bruno Fernandes is the most popular choice, followed by De Bruyne and Bellingham. There is a grand total of 48 entries in the assist list, for a total of 55 assists, but none of the individuals listed above have contributed any of them. 
+
+As it stands, no points are gained from this question.
+
+## Will Harry Kane score on penalty (not penalty shootout)?
+
+We don't know yet. There hasn't been too many penalties in the tournament, and Kane has not taken any of them, but the possibility remains.
+
+```{r}
+ggplot(most_recent, aes(x = will_harry_kane_score_on_penalty_not_penalty_shootout)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Will Harry Kane score on penalty?")
+```
+A large majority of us believe that Kane will score on penalty. 
+
+## Will Ronaldo score at all?
+
+```{r}
+ggplot(most_recent, aes(x = will_ronaldo_score_at_all)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Will Ronaldo score at all?")
+```
+
+Except for two dissidents, we all think that Ronaldo will score. But he hasn't yet.
+
+## In the last EURO there was 6 red cards. Will there be more in this championship?
+
+```{r}
+ggplot(most_recent, aes(x = in_the_last_euro_there_was_6_red_cards_will_there_be_more_in_this_championship)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("More than 6 red cards?")
+```
+
+A much more interesting question. So far we have seen the back of three sinners. Will there be another four? We hasten to point out that only individuals on the pitch counts. If a coach or a player on the bench is sent off, it doesn't count.
+
+## In EURO2021 there was 9 own goals. Will there be more in this championship?
+
+```{r}
+ggplot(most_recent, aes(x = in_euro2021_there_was_9_own_goals_will_there_be_more_in_this_championship)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("More than 9 own goals?")
+```
+
+Again our collective wisdom was more unanimous than wise. Sverke, Jacob og Lærke foresaw the avalanche of own goals that was to come. As far as I can tell, mr. Le Normand was number eight so far. At this pace, two more seems not unlikely.
+
+## Will the final end in a penalty shootout?
+
+```{r}
+ggplot(most_recent, aes(x = will_the_final_end_in_a_penalty_shootout)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Penalty shootout in the final?")
+```
+A strong majority says no, but the possibility remains.
+
+## Will England have a goal disallowed by VAR? [Decided]
+
+Phil Foden was far enough offside that the linesman would have spotted it, but VAR decided to take a look anyway. The goal was disallowed, and a majority gained points.
+
+```{r}
+ggplot(most_recent, aes(x = will_england_have_a_goal_disallowed_by_var)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Penalty shootout in the final?")
+```
+
+## During the Euros: Will Florian Wirtz start a game on the bench? [Decided]
+
+Florian Wirtz was benched in the game against Denmark, so a majority again gained points. Our collective wisdom is often impressive.
+
+```{r}
+ggplot(most_recent, aes(x = during_the_euros_will_florian_wirtz_start_a_game_on_the_bench)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Wirtz on the bench?")
+```
+
+## What will be the average age of the Denmark starting 11 in the first match? [Decided]
+
+This question has also been answered. A large majority gained points.
+
+```{r}
+ggplot(most_recent, aes(x = what_will_be_the_average_age_of_the_denmark_starting_11_in_the_first_match)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Average age of Danish starting 11?")
+```
+## Oh Harry!
+
+While I miss Harry Maguire, I am happy to see Marc Guéhi fill the void. A near red card experience yesterday and a total gaffe resulting in Slovakia's goal, but also a yellow card that suspends him for the next game. 
+
+
+## Who will be the youngest Goalscorer in the tournament? 
+
+```{r}
+ggplot(most_recent, aes(x = who_will_be_the_youngest_goalscorer_in_the_tournament)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Youngest Goalscorer")
+```
+None of the above is currently the correct answer, but Mainoo and Yamal looks like they might just get a goal. 
+
+## Who will be the oldest Goalscorer in the tournament? 
+
+
+```{r}
+ggplot(most_recent, aes(x = who_will_be_the_oldest_goalscorer_in_the_tournament)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Oldest Goalscorer")
+```
+As it stands, it is Luka Modric, but Ronaldo is still in the tournament. Jan Erling & Vilde are currently receiving points for this question.
+
+## How many goals will be scored in the tournament? 
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+
+file <- read_excel("output.xlsx")
+names(file) <- c("game", "score", "participant")
+
+file <- file %>%  
+  mutate(score = if_else(score < 6 & participant == "Observed", NA, score)) %>% 
+  mutate(Observed = if_else(participant == "Observed", 1.01, 1))
+ 
+# make a line plot in ggplot with the x-axis as the game and the y-axis as the score, for each participant
+
+# Use Plotly to create an interactive line plot where you can hover over the lines to see the name of value 'participant'
+library(plotly)
+
+# Assuming 'file' is the dataframe with columns 'game', 'participant', and 'score'
+
+# Set color values for all participants
+colors <- ifelse(file$participant == "observed", "black", "grey")
+
+# Create the line plot
+plot <- plot_ly(data = file, x = ~game, y = ~score, color = ~participant, colors = colors,
+                type = 'scatter', mode = 'lines+markers', hoverinfo = 'text', text = ~paste("Participant: ", participant),
+                showlegend = FALSE) %>%
+  add_trace(data = subset(file, participant == "Observed"), x = ~game, y = ~score, type = 'scatter', mode = 'lines',
+            line = list(color = 'black', width = 2))
+
+# Add labels and title
+plot <- plot %>% layout(title = 'Participant Scores by Game', xaxis = list(title = 'Game'), yaxis = list(title = 'Score'))
+
+# Display the plot
+plot
+```
+
+The championship started with a 6 goal game, which caused the black line representing the actual number of goals to enter on a high note. Yet, our collective wisdome is almost stunnigly precise. 
+
+At the time of writin, there has been 93 goals in the tournament. This is the exact estimate of Jenny and Hedda, and they stand to win the points right now. However, 10 participants are within 4 goals of the actual number, so the excitement will remain to the end.
