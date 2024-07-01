@@ -83,7 +83,7 @@ As it stands, we gain no points from this question
 ## Who will be assist king in EURO2024?
 
 ```{r}
-Sys.setlocale()
+invisible(Sys.setlocale())
 assist_king <- most_recent %>% 
   select(who_will_be_assist_king_span_style_font_size_17_6px_font_style_normal_font_weight_400_in_euro2024_span) %>% 
   mutate(tmp = as.integer(factor(who_will_be_assist_king_span_style_font_size_17_6px_font_style_normal_font_weight_400_in_euro2024_span))) %>% 
