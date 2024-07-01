@@ -2,11 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/VAR/index.html",
+      "/posts/Update_Qual/index.html",
       "/posts/Spain/index.html",
       "/posts/Florian/index.html",
       "/posts/How_old_were_the_danes/index.html",
       "/posts/England/index.html",
-      "/posts/Update_Qual/index.html",
       "/posts/Belgium_Romania/index.html",
       "/posts/Georgia_CzechRep/index.html",
       "/posts/Germany/index.html",
@@ -21,7 +22,6 @@
       "/posts/Slovakia_Ukraine/index.html",
       "/posts/Switzerland/index.html",
       "/posts/Turkey_Portugal/index.html",
-      "/posts/VAR/index.html",
       "/posts/Spain_Italy/index.html",
       "/posts/Denmark_England/index.html",
       "/posts/Croatia_Albania/index.html",

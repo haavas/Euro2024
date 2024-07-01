@@ -2,7 +2,7 @@
 title: "England has a goal disallowed by VAR"
 author: "Håvard Strand"
 date: "last-modified"
-categories: [Qualitiatve]
+categories: [Qualitative]
 execute:
   echo: false
 ---
