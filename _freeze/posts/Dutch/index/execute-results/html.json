@@ -1,0 +1,17 @@
+{
+  "hash": "64d209181658f99009d5e74cab4756d8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Dutch victory over Romania\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Are the Dutch the dark horse?\n\nThe Dutch have Turkey in the quarterfinals, and they are the favorites. Is Gakpo the new van Basten? \n\n\n::: {.cell}\n\n:::\n\n\nThis was the opposite of interesting. All but four of us had this outcome, and the standing is more or less unchanged, with Øyvind still in the lead.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_42-1.png){width=100%}\n:::\n:::\n\n\nMany of us believe in England, so the standings change very little. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
