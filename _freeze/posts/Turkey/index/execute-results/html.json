@@ -1,0 +1,17 @@
+{
+  "hash": "8feb3e8823f8b13631685388cbc97178",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"The gates of Vienna have been overrun\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Turkey beats the Austria\n\nOlav was the only one who believed in Turkey, and he climbs in the ratings. The rest of us are left to ponder where we went wrong. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_42-1.png){width=100%}\n:::\n:::\n\n\nMany of us believe in England, so the standings change very little. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
