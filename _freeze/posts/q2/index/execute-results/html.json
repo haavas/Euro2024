@@ -1,0 +1,17 @@
+{
+  "hash": "f208b22098feadb45f8bfffd5bea4d1f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"The gates of Vienna have been overrun\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# France beats Portugal on penalties\n\nMy 12-year old daiughter felt this was harsh. She fancied Portugal to win the game as they played the best football and played with the most flair. But France won on penalties. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nAlmost everyone had France in a semifinal, so this game changed little in the standings. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
