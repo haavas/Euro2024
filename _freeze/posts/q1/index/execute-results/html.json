@@ -1,0 +1,17 @@
+{
+  "hash": "4c374aac034f1e9deebd664e29922119",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"The gates of Vienna have been overrun\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Spain beats Germany\n\nThe two strongest-looking teams in the tournament met, and there was little doubt as to who was strongest. Spain must surely be favorites to win the tournament now. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_45-1.png){width=100%}\n:::\n:::\n\n\nFew had any faith in Spain, but those how did are now rewarded. Vegard is now in third. ",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
