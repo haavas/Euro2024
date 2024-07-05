@@ -1,5 +1,5 @@
 ---
-title: "The gates of Vienna have been overrun"
+title: "Spain is in the Semifinals"
 author: "Håvard Strand"
 date: "last-modified"
 categories: [knockout]

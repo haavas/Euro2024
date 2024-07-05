@@ -1,0 +1,17 @@
+{
+  "hash": "50da60e7ad24e2e5b0e051c48cc6403a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Tore knew it all along\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Ronaldo is out of the tournament. Goalless\n\nAnd therefore the correct answer to that question was \"No\". And Tore was the only one who got it right. Well done.\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

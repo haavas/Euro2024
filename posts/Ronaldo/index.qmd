@@ -1,5 +1,5 @@
 ---
-title: "France is through"
+title: "Tore knew it all along"
 author: "Håvard Strand"
 date: "last-modified"
 categories: [knockout]
@@ -7,9 +7,9 @@ execute:
   echo: false
 ---
 
-# France beats Portugal on penalties
+# Ronaldo is out of the tournament. Goalless
 
-My 12-year old daiughter felt this was harsh. She fancied Portugal to win the game as they played the best football and played with the most flair. But France won on penalties. 
+And therefore the correct answer to that question was "No". And Tore was the only one who got it right. Well done.
 
 
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
@@ -62,4 +62,3 @@ ggplot(data = long_pong, aes(x = reorder(V1, total), y=poeng, fill = V)) +
 
 ```
 
-Almost everyone had France in a semifinal, so this game changed little in the standings. 
