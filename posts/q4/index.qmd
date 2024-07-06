@@ -1,0 +1,65 @@
+---
+title: "Netherlands beat Turkey"
+author: "Håvard Strand"
+date: "last-modified"
+categories: [knockout]
+execute:
+  echo: false
+---
+
+# Final quarterfinal sees Netherlands through
+
+It is impressive how many teams that been in the lead and then drpped out. It might just be a form of strategy not to score the first goal, in which light all of a sudden many things make sense. 
+
+
+```{r init, echo=FALSE, message=FALSE , warning=FALSE}
+
+library(tidyverse)
+library(readxl)
+library(knitr)
+
+knitr::opts_chunk$set(out.width = "100%")
+
+```
+
+
+```{r knock_46, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+
+invisible(Sys.setlocale())
+poeng_prev <- tbl_df(read.csv("details47.csv", sep=";", header = FALSE, encoding = "utf-8"))
+poeng_prev$total_prev <- poeng_prev$V2 + poeng_prev$V3 + poeng_prev$V4
+poeng_prev <- poeng_prev %>% select(V1, total_prev)
+
+poeng <- tbl_df(read.csv("details48.csv", sep=";", header = FALSE))
+
+poeng$total <- poeng$V2 + poeng$V3 + poeng$V4
+
+poeng <- inner_join(poeng, poeng_prev, by="V1")
+poeng$diff <- poeng$total - poeng$total_prev
+
+poeng <- rename(poeng, V35 = V4)
+poeng <- rename(poeng, V34 = V3)
+poeng <- rename(poeng, V36 = V2)
+poeng$V34 <-poeng$V34 - poeng$diff
+
+
+long_pong <- poeng %>% select(V1, V34, V35, V36, total, diff)  %>% gather(key = V, -V1, -total, value = poeng) %>% arrange(V)
+
+invisible(Sys.setlocale())
+ggplot(data = long_pong, aes(x = reorder(V1, total), y=poeng, fill = V)) + 
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  geom_text(aes(V1, 0, label = total), hjust = -0.50, size = 5) +
+  ylab("Points") +
+  xlab(" ") +
+  scale_fill_manual(values=c("#AAAAAA", "#990000", "#E69F00", "#56B4E9"), 
+                    name="Origin",
+                    breaks=c("V36", "V35", "V34", "diff"),
+                    labels=c("Group Stage", "Qualitative", "Knockout Stage", "Since Last")) +
+  theme(axis.text=element_text(size=18), axis.title=element_text(size=18,face="bold")) +
+  theme(legend.title=element_text(size=18), 
+    legend.text=element_text(size=18))
+
+```
+
+The top duo raced ahead of the rest of the front. Øyvind and Dagfinn are seemingly in a two-horse race to win our competition.

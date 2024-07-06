@@ -1,0 +1,17 @@
+{
+  "hash": "8916414ead7fe0b82d340d70204cb7dd",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Netherlands beat Turkey\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Final quarterfinal sees Netherlands through\n\nIt is impressive how many teams that been in the lead and then drpped out. It might just be a form of strategy not to score the first goal, in which light all of a sudden many things make sense. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nThe top duo raced ahead of the rest of the front. Øyvind and Dagfinn are seemingly in a two-horse race to win our competition.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
