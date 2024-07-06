@@ -1,0 +1,17 @@
+{
+  "hash": "31229bdf1c4285742640f24a2c422171",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"England goes forth\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# England beats Switzerland\n\nSwitzerland is apparently the only country with a penalty shootout record worse than England, so it might have been managerial excellence from Southgate to gain some positive experience this way. Or, it might be that the English team is just too talented even for themselves to mess up. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nMany have guessed that England will make it to the semis, so no huge changes in the standings. Vegard dropped from third to tenth, but there is a secret here, which soon will be revealed. \n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
