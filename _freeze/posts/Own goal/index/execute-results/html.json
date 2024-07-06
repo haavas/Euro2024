@@ -1,0 +1,17 @@
+{
+  "hash": "2b05104b31cbf098ce5ebfed9620879b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"10 Own goals\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [Qualitative]\nexecute:\n  echo: false\n---\n\n\n# Points to be distributed\n\nGakpo is not sole top scorer anymore, as his goal was deemed an own goal. That means the tally is 10, which is more than nine, and we have points to distribute.\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nJostein, Jacob and Sverke predicted correctly, while the rest of us were wrong. Jostein is now in third, 67 points behind Øyvind, but only 11 points behind Dagfinn.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
