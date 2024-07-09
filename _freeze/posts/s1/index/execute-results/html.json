@@ -1,0 +1,17 @@
+{
+  "hash": "b3adcc41efc8e1200db93e4dd03d7c91",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Spain is in the final!\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# Spain outplays France\n\nDoes it pay off to score first in this tournament? Spain came back against France after the French took the lead. \n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_49-1.png){width=100%}\n:::\n:::\n\n\nNine of us had Spain in the final, which is a prerequisite for getting 200 points in the final. If Spain wins, the winner must be one of the individuals who had Spain in the final. There are 7 points between Felix and Vegard. In between there is Anna, but her winner is regrettably out of the tournament. Importantly, 7 points is less than the 30 points awarded for each correct answer for the 15 questions. \n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

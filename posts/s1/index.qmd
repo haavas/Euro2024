@@ -1,15 +1,15 @@
 ---
-title: "Yamal is the youngest goalscorer in the tournament"
+title: "Spain is in the final!"
 author: "Håvard Strand"
 date: "last-modified"
-categories: [Qualitative]
+categories: [knockout]
 execute:
   echo: false
 ---
 
-# Very many points to be distributed
+# Spain outplays France
 
-Lamine Yamal is the youngest goalscorer in the tournament. Points will be distributed as follows:
+Does it pay off to score first in this tournament? Spain came back against France after the French took the lead. 
 
 ```{r init, echo=FALSE, message=FALSE , warning=FALSE}
 
@@ -22,14 +22,14 @@ knitr::opts_chunk$set(out.width = "100%")
 ```
 
 
-```{r knock_46, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
+```{r knock_49, echo = FALSE, warning=FALSE,  fig.height=10, fig.width=10}
 
 invisible(Sys.setlocale())
-poeng_prev <- tbl_df(read.csv("details48_.csv", sep=";", header = FALSE, encoding = "utf-8"))
+poeng_prev <- tbl_df(read.csv("details48.csv", sep=";", header = FALSE, encoding = "utf-8"))
 poeng_prev$total_prev <- poeng_prev$V2 + poeng_prev$V3 + poeng_prev$V4
 poeng_prev <- poeng_prev %>% select(V1, total_prev)
 
-poeng <- tbl_df(read.csv("details48.csv", sep=";", header = FALSE))
+poeng <- tbl_df(read.csv("details49.csv", sep=";", header = FALSE))
 
 poeng$total <- poeng$V2 + poeng$V3 + poeng$V4
 
@@ -61,8 +61,7 @@ ggplot(data = long_pong, aes(x = reorder(V1, total), y=poeng, fill = V)) +
 
 ```
 
-Øyvind is now 86 points ahead of Dagfinn. Myself manouvered into third place, whereas Maiken, Kristoffer and Christian are all within striking distance of the podium. Scott and Felix are making significant progress from behind, and might progress further by the end of the night.
+Nine of us had Spain in the final, which is a prerequisite for getting 200 points in the final. If Spain wins, the winner must be one of the individuals who had Spain in the final. There are 7 points between Felix and Vegard. In between there is Anna, but her winner is regrettably out of the tournament. Importantly, 7 points is less than the 30 points awarded for each correct answer for the 15 questions. 
 
-That Felix inched ahead of Vegard might be one of the most significant changes in the tournament. 
 
 
