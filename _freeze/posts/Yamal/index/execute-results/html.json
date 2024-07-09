@@ -1,0 +1,17 @@
+{
+  "hash": "f82264bf0ba8ce83014240f418ae0986",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Yamal is the youngest goalscorer in the tournament\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [Qualitative]\nexecute:\n  echo: false\n---\n\n\n# Very many points to be distributed\n\nLamine Yamal is the youngest goalscorer in the tournament. Points will be distributed as follows:\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nØyvind is now 86 points ahead of Dagfinn. Myself manouvered into third place, whereas Maiken, Kristoffer and Christian are all within striking distance of the podium. Scott and Felix are making significant progress from behind, and might progress further by the end of the night.\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
