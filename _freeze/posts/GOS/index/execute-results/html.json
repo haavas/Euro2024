@@ -1,0 +1,17 @@
+{
+  "hash": "0e862d32df05361db4cda38cb2ff1912",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Luka Modric is the oldest goalscorer in the tournament\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [Qualitative]\nexecute:\n  echo: false\n---\n\n\n# No competition for old men\n\nDue to a sorting error in my script, Jesus Navas was listed as older than Luka Modric. This was incorrect, and the points for oldest goalscorer awaited Navas' continued actions. Alas, Navas is born in November, and Modric in September 1985, so this case should have been closed long ago. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nJan Erling was the only one to predict Modric. Well done, and more importantly -- Jan Erling has England as the winner. \n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
