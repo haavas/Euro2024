@@ -1,0 +1,17 @@
+{
+  "hash": "2f6b61606d2929ccc2acf48c8eeac466",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"England is in the final!\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# England won but Spain are favorites to win\n\nDoes it pay off to score first in this tournament? I repeat the question. The Dutch could have won this game, but they didn't. \n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_49-1.png){width=100%}\n:::\n:::\n\n\nFew of us saw England in the final. Dagfinn is now 56 points behind Øyvind, and neither of them can gain the 200 points from the final. Myself, Kristoffer and Jan Erling have England as the winner. The difference between us means it is down to the qualitative questions.\n\nYet, Spain are clear favorites to win the tournament, and if that is the case, Felix is best positioned to win. Vegard might easily pass based on the questions. Dag Harald is also in the running, but he needs a lot of points from the final game to pass Felix and Vegard in case of a Spanish win.\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
