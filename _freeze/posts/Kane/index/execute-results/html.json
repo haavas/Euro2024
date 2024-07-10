@@ -1,0 +1,17 @@
+{
+  "hash": "c21821fbf818521e6d7470924c439f1e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Harry Kane scored a penalty\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [Qualitative]\nexecute:\n  echo: false\n---\n\n\n# VAR to the rescue\n\nVAR rescued the footballing world from a terrible injustice. Harry Kane scored a penalty, and we have a lot of points to share.\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nThis penalty kick will in the end have little bearing on our competition. But, there are still 6 questions left to evaluate. That is 180 points in total. \n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
