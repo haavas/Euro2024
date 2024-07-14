@@ -1,0 +1,17 @@
+{
+  "hash": "9c5bed4dff9ea93398fda7363a886066",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Felix Haass Won!\"\nauthor: \"Håvard Strand\"\ndate: \"last-modified\"\ncategories: [knockout]\nexecute:\n  echo: false\n---\n\n\n# And so did Spain\n\nFelix won our competition with a margin of 7 points! \n\nVegard came second, and would have won if Spain had won 1-0 or a 0-0 game had been decided on penalties in Spain's favor. He had predicted a total of 114 goals, but the final tally ended on 117, which was Miroslav's prediction. As no one had predicted 115, Vegard would have been closest with that result as well. Felix, on the other hand, predicted 150 goals and was among the top five optimists. \n\nDag Harald came third, 61 points behind Felix. If the game had ended with three or more red cards, Dag Harald would have been exactly *one* point behind Felix. If the final score had been a total of 38 goals, Dag Harald would have won.\n\nNina came fourth, but there was no way she could have won. If the final had ended 19-19 and gone to penalties, she would have been 13 points behind Felix. Nina predicted 152 goals, which was exactly the same as Dag Harald, so regardless of the final score, she would have been behind him.\n\nØyvind came fifth, with France as his winner. Once the Dutch went out, Øyvind could no longer win. \n\nJonas came sixth. He did very well in the quantitative part, but not so well in the qualitative section. In fact, he came last. \n\nThe rest of us will have another chance in two years. Thanks for participating!\n\n\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/knock_46-1.png){width=100%}\n:::\n:::\n\n\nThe top duo raced ahead of the rest of the front. Øyvind and Dagfinn are seemingly in a two-horse race to win our competition.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
