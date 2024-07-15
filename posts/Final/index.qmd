@@ -79,4 +79,4 @@ ggplot(data = long_pong, aes(x = reorder(V1, total), y=poeng, fill = V)) +
 
 ```
 
-The top duo raced ahead of the rest of the front. Øyvind and Dagfinn are seemingly in a two-horse race to win our competition.
+
